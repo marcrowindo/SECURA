@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  access_count: 1
+  object_type: MyString
+  vds_certification: MyString
+  security_hull: MyString
+  emergency_response: MyString
+  request: one
+
+two:
+  access_count: 1
+  object_type: MyString
+  vds_certification: MyString
+  security_hull: MyString
+  emergency_response: MyString
+  request: two

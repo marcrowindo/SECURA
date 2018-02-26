@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zip_code: 1
+  price_min: 1
+  price_max: 1
+  user: one
+
+two:
+  zip_code: 1
+  price_min: 1
+  price_max: 1
+  user: two

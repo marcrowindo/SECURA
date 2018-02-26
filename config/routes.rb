@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   resources :requests, only: [:show] do
     resources :buildings, only: [:new, :create] do
-      resources :floors, only: [:new, :create]
+      resources :floors, only: [:new, :create,]
     end
   end
 end

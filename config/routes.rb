@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'requests#new'
+  root to: 'pages#home'
 
   resources :users, only: [:edit, :update]
 

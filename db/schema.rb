@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226142347) do
+ActiveRecord::Schema.define(version: 20180227113754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,10 +42,8 @@ ActiveRecord::Schema.define(version: 20180226142347) do
     t.integer "zip_code"
     t.integer "price_min"
     t.integer "price_max"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,9 +52,11 @@ ActiveRecord::Schema.define(version: 20180226142347) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "request_id"
+    t.index ["request_id"], name: "index_users_on_request_id"
   end
 
   add_foreign_key "buildings", "requests"
   add_foreign_key "floors", "buildings"
-  add_foreign_key "requests", "users"
+  add_foreign_key "users", "requests"
 end

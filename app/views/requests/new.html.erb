@@ -1,49 +1,20 @@
-<h1>Requests#new</h1>
-<p>Find me in app/views/requests/new.html.erb</p>
+<div class="banner">
+        <div class="banner-content">
+          <h1>Home security made easy</h1>
+          <h2>
+            Tested alarm system specialists from your region
+          </h2>
+          
 
-<div class="wrapper">
-  <div class="container-logo-help">
-    <div class="logo-container">
-      <% image_url('background.jpeg') %>
-    </div>
-    <div class="help-container">
-      <p>0176 700 166 02</p>
-      <a href="#" target="_blank">FAQ</a>
-    </div>
-  </div>
+          <%= simple_form_for  @request do |f|%>
+            <%= f.input :zip_code, as: :integer %>
+            <%= f.submit "Get Offers" %>
+          <% end %>
 
-  <div class="container-form">
-    <div class="progress-bar-container">
-    </div>
 
-    <div class="form-content-container">
-      <div class="form-heading">
-        <h2>What would you like to secure</h2>
-      </div>
-      <div class="form-icons">
-        <ul>
-          <li><% image_url('house.png')</li>
-          <li><% image_url('apartment.png')</li>
-          <li><% image_url('office.png')</li>
-        </ul>
-      </div>
 
-      <div class="form-email-heading">
-        <h3>To continue, please provide your email below</h3>
-        <form class="form-email">
-          <input type="ZIP" placeholder="Email address">
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div class="form-buttons">
-        <a href="#">Go back</a>
-        <a href="#">Next</a>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>Copyright © 2018 by Secura AG, all rights reserved</p>
-    </div>
-  </div>
-
-</div>
+<!--           <form class="form">
+                <input type="ZIP" placeholder="ZIP code">
+                <button type="submit">Get offers</button>
+          </form>
+ -->

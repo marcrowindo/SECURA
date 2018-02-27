@@ -1,2 +1,7 @@
-<h1>Buildings#new</h1>
-<p>Find me in app/views/buildings/new.html.erb</p>
+<%= simple_form_for [@request, @building] do |b| %>
+  <%= b.input :object_type, collection: ['House', "Apartment", 'Office'] %>
+  <%= b.simple_fields_for :user do |u| %>
+    <%= u.input :email %>
+  <% end %>
+  <%= b.button :submit %>
+<% end %>

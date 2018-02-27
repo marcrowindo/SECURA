@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :requests
+  belongs_to :user
   validates :email, presence: true, uniqueness: true
 end

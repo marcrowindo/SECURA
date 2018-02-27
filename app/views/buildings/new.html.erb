@@ -1,7 +1,58 @@
-<%= simple_form_for [@request, @building] do |b| %>
-  <%= b.input :object_type, collection: ['House', "Apartment", 'Office'] %>
-  <%= b.simple_fields_for :user do |u| %>
-    <%= u.input :email %>
-  <% end %>
-  <%= b.button :submit %>
-<% end %>
+<div class="wrapper">
+  <div class="main-container">
+
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <% image_url('background.jpeg') %>
+      </div>
+      <div class="container-help">
+        <p>0176 700 166 02</p>
+        <a href="#" target="_blank">FAQ</a>
+      </div>
+    </div>
+
+    <div class="container-progress">
+    </div>
+
+    <div class="container-content">
+      <div class="container-form-content">
+        <div class="container-price-estimate">
+          <h6>Your current price range estimate:</h6>
+          <h3>1.900 - 3.100 €</h3>
+
+        </div>
+      </div>
+      <div class="form-heading">
+        <h2>What would you like to secure?</h2>
+      </div>
+
+      <div class="form-icons">
+        <img src="<%= image_url('house.png') %>" alt="house">
+        <img src="<%= image_url('apartment.png') %>" alt="house">
+        <img src="<%= image_url('office.png') %>" alt="house">
+      </div>
+
+      <div class="form-email">
+        <h5>To continue, please provide your email below</h5>
+        <%= simple_form_for [@request, @building] do |b| %>
+        <%= b.input :object_type, collection: ['House', "Apartment", 'Office'] %>
+        <%= b.simple_fields_for :user do |u| %>
+        <%= u.input :email %>
+        <% end %>
+        <%= b.button :submit %>
+        <% end %>
+      </div>
+
+      <div class="form-buttons">
+        <a href="#" id="button-back">Go back</a>
+        <a href="#" id="button-next">Next</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+    </div>
+
+  </div>
+
+</div>

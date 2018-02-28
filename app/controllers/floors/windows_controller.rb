@@ -1,6 +1,13 @@
 class Floors::WindowsController < ApplicationController
+
+  def new
+
+  end
+
   def create
+
+
     raise
-    #params[:floors]["25"][:windows]
+
   end
 end

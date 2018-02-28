@@ -11,12 +11,15 @@ Rails.application.routes.draw do
   resources :buildings, only: [:show] do
     resources :floors, only: [:new, :create, :index]
     get 'floors/windows', to: 'floors/windows#new'
-
     post 'floors/windows', to: 'floors/windows#create', as: :windows_create
+    get 'floors/rooms', to: 'floors/rooms#new'
+    post 'floors/rooms', to: 'floors/rooms#create', as: :rooms_create
+    get 'floors/doors', to: 'floors/doors#new'
+    post 'floors/doors', to: 'floors/doors#create', as: :doors_create
 
     get 'hull_security', to: 'buildings/hull_security#new'
     patch 'hull_security', to: 'buildings/hull_security#create'
-    
+
     get 'vds_certification', to: 'buildings/vds_certification#new'
     post 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
 

@@ -1,12 +1,11 @@
-<h1> It Worked </h1>
+<h1>Rooms</h1>
 
-
-<%= form_tag building_floors_windows_path(@building) do %>
+<%= form_tag building_rooms_create_path(@building) do %>
   <% @floors.each do |floor| %>
     <%= fields_for 'floors[]', floor do |p| %>
       <div class="field">
         <%= p.label floor.floor_type %><br>
-        <%= p.text_field :windows %>
+        <%= p.text_field :rooms %>
       </div>
     <% end %>
   <% end %>

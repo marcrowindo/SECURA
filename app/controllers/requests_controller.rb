@@ -9,6 +9,11 @@ class RequestsController < ApplicationController
     redirect_to new_request_building_path(@request)
   end
 
+  def show
+    @request = Request.find(params[:id])
+    @user = User.find(@request.user.id)
+  end
+
   def edit
   end
 

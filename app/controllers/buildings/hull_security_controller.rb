@@ -7,7 +7,7 @@ class Buildings::HullSecurityController < ApplicationController
   def create
     @building = Building.find(params[:building_id])
     @building.update(security_hull: building_params[:security_hull])
-    redirect_to
+    redirect_to building_vds_certification_path
   end
 
   private

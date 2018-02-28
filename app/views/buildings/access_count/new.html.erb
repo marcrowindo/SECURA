@@ -1,0 +1,7 @@
+<h1>How many people bro?</h1>
+
+<%= simple_form_for building_access_count_path (@building) do |b| %>
+  <%= b.text_field :access_count %>
+
+  <%= b.submit "Update Building" %>
+<% end %>

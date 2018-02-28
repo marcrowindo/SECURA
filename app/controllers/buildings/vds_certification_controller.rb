@@ -9,7 +9,7 @@ class Buildings::VdsCertificationController < ApplicationController
     id = params[:building_id]
     @building.update(vds_certification: params["/buildings/#{id}/vds_certification"]["vds_certification"])
     @building.save
-    redirect_to root_path
+    redirect_to building_access_count_path
   end
 
 end

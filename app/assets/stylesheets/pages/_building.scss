@@ -21,21 +21,28 @@ p {
   font-color: lightgrey;
 }
 .wrapper {
-  max-width: 1100px;
-  margin: 50px auto;
+  max-width: 1000px;
+  margin: 0px auto;
   background-color: white;
-  padding: 0px 50px;
+  background-size: 100vh;
+  padding: 0px 70px;
+
+}
+.container-logo img {
+  padding-top: 20px;
+  width: 150px;
 }
 .container-logo-help {
   display: flex;
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 .container-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(15% 35% 35% 15%);
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
   border-radius: 15px;
 }
@@ -52,7 +59,8 @@ p {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-
+  min-height: 0;
+  min-width: 0;
 }
 .container-price-estimate {
   color: white;
@@ -63,28 +71,51 @@ p {
 .form-heading {
   grid-column: 2 / span 2;
   grid-row: 1 / span ;
-  padding: 10px;
+  padding: 20px 50px;
+  min-height: 0;
+  min-width: 0;
 }
 .form-icons {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
+  padding: 20px 50px;
+  //display: flex;
+  justify-items: space-around;
+  min-height: 0;
+  min-width: 0;
+  img {
+    width: 90px;
+  }
+
 }
 .form-email {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
-  padding: 10px;
+  padding: 0px 50px;
+  min-height: 0;
+  min-width: 0;
 }
+.form-group label {
+  font-size: 13px;
+}
+.form-group select{
+  width: 65%;
+}
+.form-group input {
+  width: 65%;
+}
+
 .form-buttons {
   grid-column: 2 / span 2;
   grid-row: 4 / span 1;
-  padding: 41px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 0;
+  min-width: 0;
 }
+
 #button-back {
   color: #999999;
   border: 1px solid #999999;
@@ -92,6 +123,7 @@ p {
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
+  transition: background 0.5s ease;
 }
 #button-back:hover {
   opacity: 1;
@@ -106,21 +138,19 @@ p {
   border-radius: 30px;
   font-size: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: background 0.5s ease;
+  transition: 0.5s ease;
   color: white;
+  text-decoration: none;
 }
 #button-next:hover {
-  margin: 10px 30px;
   background-color: #f94b1b;
-  border: 0px;
-  border-radius: 30px;
-  font-size: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
 
-
+// * {
+//   border: solid 1px red;
+// }
 
 
 
@@ -130,4 +160,19 @@ p {
   margin-bottom: 50px;
 }
 
+
+.form-email {
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #3A9FEE;
+  border-radius: 4px;
+}
+}
 

@@ -14,15 +14,8 @@ class FloorsController < ApplicationController
       @floor.building = @building
       @floor.save
     end
+
     redirect_to building_hull_security_path(@building)
-  end
-
-  def index
-    @floors = Floor.where(building_id: params[:building_id])
-    @building = Building.find(params[:building_id])
-  end
-
-  def update
   end
 
   private

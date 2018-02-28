@@ -3,7 +3,7 @@
 
     <div class="container-logo-help">
       <div class="container-logo">
-        <% image_url('background.jpeg') %>
+        <img src="<%= image_url('SECURA logo-blue.png') %>" alt="logo">
       </div>
       <div class="container-help">
         <p>0176 700 166 02</p>
@@ -26,26 +26,35 @@
         <h2>What would you like to secure?</h2>
       </div>
 
-      <div class="form-icons">
-        <img src="<%= image_url('house.png') %>" alt="house">
-        <img src="<%= image_url('apartment.png') %>" alt="house">
-        <img src="<%= image_url('office.png') %>" alt="house">
-      </div>
-
       <div class="form-email">
-        <h5>To continue, please provide your email below</h5>
+        <h6>To continue, please provide your email below</h6>
+
         <%= simple_form_for [@request, @building] do |b| %>
-        <%= b.input :object_type, collection: ['House', "Apartment", 'Office'] %>
+        <%# b.input :object_type, collection: ['House', "Apartment", 'Office'], as: :radio_buttons %>
+          <label>
+            <input type="radio" name="building[object_type]" value="house">
+            <img src="<%= image_url('house.png') %>" alt="house">
+          </label>
+
+          <label>
+            <input type="radio" name="building[object_type]" value="apartment" />
+            <img src="<%= image_url('apartment.png') %>" alt="apartment">
+          </label>
+
+          <label>
+            <input type="radio" name="building[object_type]" value="office" />
+            <img src="<%= image_url('office.png') %>" alt="office">
+          </label>
+
         <%= b.simple_fields_for :user do |u| %>
         <%= u.input :email %>
         <% end %>
-        <%= b.button :submit %>
-        <% end %>
-      </div>
-
-      <div class="form-buttons">
-        <a href="#" id="button-back">Go back</a>
-        <a href="#" id="button-next">Next</a>
+        <p>Your data will not be used by any third parties without your explicit consent. Refer to our privacy policy <a href="#" target="_blank">here</a>.</p>
+        <div class="form-buttons">
+          <a href="#" id="button-back">Back</a>
+          <%= b.button :submit, id: "button-next" %>
+          <% end %>
+        </div>
       </div>
     </div>
 

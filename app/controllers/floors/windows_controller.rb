@@ -6,6 +6,7 @@ class Floors::WindowsController < ApplicationController
   end
 
   def create
+    @building = Building.find(params[:building_id])
     id_array = params[:floors].keys
     floor_array = Floor.where(building_id: params[:building_id])
     
@@ -14,8 +15,8 @@ class Floors::WindowsController < ApplicationController
       floor = Floor.find(id)
       floor.windows = window_amount
       floor.save 
-      raise
     end
+    redirect_to building_vds_certification_path(@building)
   end
 end
 

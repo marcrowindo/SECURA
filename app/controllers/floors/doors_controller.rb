@@ -1,5 +1,4 @@
-class Floors::WindowsController < ApplicationController
-
+class Floors::DoorsController < ApplicationController
   def new
     @building = Building.find(params[:building_id])
     @floors = Floor.where(building_id: params[:building_id])
@@ -11,11 +10,11 @@ class Floors::WindowsController < ApplicationController
     floor_array = Floor.where(building_id: params[:building_id])
 
     id_array.each do |id|
-      window_amount = params[:floors][id][:windows]
+      door_amount = params[:floors][id][:doors]
       floor = Floor.find(id)
-      floor.windows = window_amount
+      floor.doors = door_amount
       floor.save
     end
-    redirect_to building_floors_doors_path(@building)
+    redirect_to building_vds_certification_path(@building)
   end
 end

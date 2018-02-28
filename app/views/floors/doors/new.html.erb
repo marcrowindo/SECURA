@@ -1,0 +1,15 @@
+<h1>Doors</h1>
+
+<%= form_tag building_doors_create_path(@building) do %>
+  <% @floors.each do |floor| %>
+    <%= fields_for 'floors[]', floor do |p| %>
+      <div class="field">
+        <%= p.label floor.floor_type %><br>
+        <%= p.text_field :doors %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     get 'access_count', to: 'buildings/access_count#new'
     post 'access_count', to: 'buildings/access_count#create', as: :access_count_create
 
+    get 'emergency_response', to: 'buildings/emergency_response#new'
+    post 'emergency_response', to: 'buildings/emergency_response#create', as: :emergency_response_create
   end
 
   resources :floors, only: [:update]

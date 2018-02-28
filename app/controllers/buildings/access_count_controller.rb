@@ -9,7 +9,7 @@ class Buildings::AccessCountController < ApplicationController
     id = params[:building_id]
     @building.update(access_count: params["/buildings/#{id}/access_count"]["access_count"])
     @building.save
-    raise
+    redirect_to building_emergency_response_path
   end
 
 end

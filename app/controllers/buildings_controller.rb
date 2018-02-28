@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+
   def new
     @building = Building.new
     @request = Request.find(params[:request_id])
@@ -32,6 +33,10 @@ class BuildingsController < ApplicationController
 
     redirect_to new_building_floor_path(@building)
   end
+
+
+
+  private
 
   def user_params
     params.require(:building).require(:user).permit(:email)

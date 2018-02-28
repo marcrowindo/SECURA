@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     resources :floors, only: [:new, :create, :index]
     get 'floors/windows', to: 'floors/windows#new'
     post 'floors/windows', to: 'floors/windows#create', as: :windows_create
+
+    get 'hull_security', to: 'buildings/hull_security#new'
+    patch 'hull_security', to: 'buildings/hull_security#create'
+    
+    get 'vds_certification', to: 'buildings/vds_certification#new'
+    post 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
   end
 
   resources :floors, only: [:update]

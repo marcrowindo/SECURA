@@ -17,9 +17,6 @@ class FloorsController < ApplicationController
     redirect_to building_floors_windows_path(@building)
   end
 
-  def update
-  end
-
   private
 
   def floor_params

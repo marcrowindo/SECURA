@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   end
 
   resources :buildings, only: [:show] do
-    resources :floors, only: [:new, :create]
+    resources :floors, only: [:new, :create, :index]
+    get 'floors/windows', to: 'floors/windows#new'
+    post 'floors/windows', to: 'floors/windows#create', as: :windows_create
   end
+
+  resources :floors, only: [:update]
 
 end

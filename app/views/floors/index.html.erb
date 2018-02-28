@@ -1,0 +1,16 @@
+<h1> It Worked </h1>
+
+
+<%= form_tag building_floors_windows_path(@building) do %>
+  <% @floors.each do |floor| %>
+    <%= fields_for 'floors[]', floor do |p| %>
+      <div class="field">
+        <%= p.label floor.floor_type %><br>
+        <%= p.text_field :windows %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

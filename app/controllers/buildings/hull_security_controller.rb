@@ -16,6 +16,5 @@ class Buildings::HullSecurityController < ApplicationController
   def building_params
     params.require(:building).permit(:security_hull)
   end
-
-
+  
 end

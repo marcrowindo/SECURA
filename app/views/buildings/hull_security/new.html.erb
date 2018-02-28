@@ -1,0 +1,11 @@
+<h1>Hull Security</h1>
+
+<p>Would you like to be home whilst the system is active?</p>
+
+<%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
+
+<%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
+
+<%= f.submit "Next"%>
+<% end %>

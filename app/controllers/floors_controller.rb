@@ -14,7 +14,8 @@ class FloorsController < ApplicationController
       @floor.building = @building
       @floor.save
     end
-    redirect_to building_floors_windows_path(@building)
+    
+    redirect_to building_hull_security_path(@building)
   end
 
   private

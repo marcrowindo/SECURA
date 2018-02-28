@@ -1,7 +1,9 @@
-<h1>lsjlsdklaslas</h1>
+<h1>VdS Cerfitication</h1>
+
+<p>Do you require VdS certification?</p>
 
 <%= simple_form_for building_vds_create_path (@building) do |b| %>
   <%= b.input :vds_certification, collection: ["No", "VdS A (Home)", "VdS B", "VdS C"], as: :radio_buttons %>
 
-  <%= b.button :submit, label: "Update Building" %>
+  <%= b.submit "Update Building" %>
 <% end %>

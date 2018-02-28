@@ -1,0 +1,11 @@
+<h1>Emergency Response</h1>
+
+<p>Are you interested emergency response services?</p>
+
+<%= simple_form_for building_emergency_response_create_path (@building), method: :patch do |f| %>
+
+<%= f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
+
+<%= f.submit "Next"%>
+<% end %>

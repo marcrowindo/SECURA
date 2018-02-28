@@ -14,12 +14,7 @@ class FloorsController < ApplicationController
       @floor.building = @building
       @floor.save
     end
-    redirect_to building_floors_path(@building)
-  end
-
-  def index
-    @floors = Floor.where(building_id: params[:building_id])
-    @building = Building.find(params[:building_id])
+    redirect_to building_floors_windows_path(@building)
   end
 
   def update

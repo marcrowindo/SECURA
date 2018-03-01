@@ -16,6 +16,6 @@ class Floors::WindowsController < ApplicationController
       floor.windows = window_amount
       floor.save
     end
-    redirect_to building_floors_doors_path(@building)
+    redirect_to building_floors_rooms_path(@building)
   end
 end

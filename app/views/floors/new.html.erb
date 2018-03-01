@@ -1,5 +1,4 @@
 <h1>Which floors of your house would you like to secure?</h1>
-phjhg
 
 <%= simple_form_for [@building, @floor] do |f| %>
   <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>

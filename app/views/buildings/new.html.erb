@@ -1,13 +1,9 @@
-<!-- FORM 1 - Building -->
-
 <div class="wrapper">
   <div class="main-container">
 
     <div class="container-logo-help">
       <div class="container-logo">
-        <%= link_to root_path do %>
-        <%= image_tag "SECURA logo-blue.png", class: "some css class here" %>
-        <% end %>
+        <img src="<%= image_url('SECURA logo-blue.png') %>" alt="logo">
       </div>
       <div class="container-help">
         <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
@@ -42,7 +38,7 @@
 
       <div class="form-email">
         <%= simple_form_for [@request, @building] do |b| %>
-
+        <%# b.input :object_type, collection: ['House', "Apartment", 'Office'], as: :radio_buttons %>
             <label class="form-icon-house">
               <input type="radio" name="building[object_type]" value="house">
               <img src="<%= image_url('house.png') %>" alt="house">
@@ -86,7 +82,6 @@
   </div>
 
 </div>
-
 
 <!-- Modal -->
 

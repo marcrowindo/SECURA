@@ -1,3 +1,4 @@
+// Specific CSS for your home-page
 
 body {
   margin: 0;
@@ -38,9 +39,43 @@ h1, h2, h3 {
   color: white;
   text-align: left;
 }
+// .banner p {
+//   font-size: 25px;
+//   font-weight: lighter;
+//   color: rgba(255, 255, 255, 0.8);
+//   margin-bottom: 50px;
+// }
+
+
+.form-group-label {
+  display: none;
+}
+.form-group input {
+  max-width: 400px;
+}
+.banner button {
+  margin: 10px 30px;
+  background-color: #FC5E25;
+  border: 0px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease;
+}
+.banner button:hover {
+  margin: 10px 30px;
+  background-color: #f94b1b;
+  border: 0px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 .banner input.btn{
+  padding: 9px;
   border-radius: 4px;
-  margin: 10px 50px;
+  margin: 10px 30px;
   background-color: #FC5E25;
   border: 0px;
   padding: 10px 50px;
@@ -51,34 +86,14 @@ h1, h2, h3 {
   color: white;
   text-decoration: none;
 }
-
-.banner input.btn:hover {
+.banner-input:hover {
   background-color: #f94b1b;
 }
 
-// Form ZIP code
-.form-inline-homepage{
-  align-items: left;
-  margin-top: 15px;
-}
-
-.form-inline-homepage label{
-  display: none;
-}
-
-.form-horizontal {
+.form-inline {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
-
-
-// ZIP code input field
-.form-inline-homepage .special {
-  width: 200px;
-  margin: 0px;
-}
-
-
 
 
 @media(max-width: 992px) {

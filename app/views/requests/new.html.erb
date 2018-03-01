@@ -1,5 +1,3 @@
-<!-- Page 1 - Home -->
-
 <div class="banner">
         <div class="banner-content">
           <h1>Home security made easy</h1>
@@ -7,9 +5,9 @@
             Tested alarm system specialists from your region
           </h2>
 
-        <div class="form-inline-homepage">
-          <%= simple_form_for @request, html: { class: "form-horizontal" }  do |f|%>
-            <%= f.input :zip_code, as: :integer, placeholder: "Your ZIP code", input_html: { class: 'special' }%>
+        <div class="form-inline">
+          <%= simple_form_for  @request do |f|%>
+            <%= f.input :zip_code, as: :integer, placeholder: "Your ZIP code" %>
             <%= f.submit "Get Offers", :class => "btn" %>
           <% end %>
         </div>

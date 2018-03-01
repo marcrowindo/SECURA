@@ -8,7 +8,7 @@ class Buildings::HullSecurityController < ApplicationController
     @building = Building.find(params[:building_id])
     @building.update(security_hull: building_params[:security_hull])
     
-    redirect_to building_floors_rooms_path
+    redirect_to building_floors_doors_path(@building)
   end
 
   private

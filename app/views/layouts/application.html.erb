@@ -7,14 +7,18 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    
     <!-- <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/> -->
     <%= favicon_link_tag 'favicon2.png' %>
 
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
+    
   </head>
   <body>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= yield(:after_js) %>
   </body>
 </html>

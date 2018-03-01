@@ -16,6 +16,6 @@ class Floors::RoomsController < ApplicationController
       floor.rooms = room_amount
       floor.save
     end
-    redirect_to building_floors_windows_path
+    redirect_to building_vds_certification_path(@building)
   end
 end

@@ -69,7 +69,8 @@
         <%= b.simple_fields_for :user do |u| %>
         <%= u.input :email, placeholder: "Your email" %>
         <% end %>
-        <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a href="#" target="_blank">here</a>.</p>
+        <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
+
         <div class="form-buttons">
           <a href="#" id="button-back">Back</a>
           <%= b.button :submit, "Next", id: "button-next" %>
@@ -87,6 +88,43 @@
 </div>
 
 
+<!-- Modal -->
+
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle"><strong>Privacy Policy</strong></h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ --><!--           <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias cupiditate autem corrupti sequi, dolor a dignissimos dolores repellat, placeat atque nam voluptatibus quod in doloribus pariatur ratione tempora velit, illum.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="jquery.bootstrap.wizard.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+    var $total = navigation.find('li').length;
+    var $current = index+1;
+    var $percent = ($current/$total) * 100;
+    $('#rootwizard .progress-bar').css({width:$percent+'%'});
+  }});
+});
+</script> -->
 
 
 

@@ -1,5 +1,6 @@
 <!-- FORM 3 - Floors -->
 
+
 <div class="wrapper">
   <div class="main-container">
 
@@ -14,6 +15,10 @@
         <a href="#" target="_blank">FAQ</a>
       </div>
     </div>
+
+<%= simple_form_for [@building, @floor] do |f| %>
+  <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
+
 
     <div class="container-progress">
       <div id="rootwizard">

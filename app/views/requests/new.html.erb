@@ -1,14 +1,18 @@
-<div class="banner">
-        <div class="banner-content">
-          <h1>Home security made easy</h1>
-          <h2>
-            Tested alarm system specialists from your region
-          </h2>
+<!-- PAGE 1 - HOME -->
 
-        <div class="form-inline">
-          <%= simple_form_for  @request do |f|%>
-            <%= f.input :zip_code, as: :integer, placeholder: "Your ZIP code" %>
-            <%= f.submit "Get Offers", :class => "btn" %>
-          <% end %>
-        </div>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Home security made easy</h1>
+    <h2>
+      Tested alarm system specialists from your region
+    </h2>
+
+    <!-- Insert ZIP code field -->
+    <div class="form-inline">
+      <%= simple_form_for  @request do |f|%>
+      <%= f.input :zip_code, as: :integer, placeholder: "Your ZIP code", label_html: { class: 'white-email-label' } %>
+      <%= f.submit "Get Offers", :class => "btn" %>
+      <% end %>
+    </div>
+  </div>
 </div>

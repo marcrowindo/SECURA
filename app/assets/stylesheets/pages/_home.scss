@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+/*-- PAGE 1 - HOME */
 
 body {
   margin: 0;
@@ -39,13 +39,6 @@ h1, h2, h3 {
   color: white;
   text-align: left;
 }
-// .banner p {
-//   font-size: 25px;
-//   font-weight: lighter;
-//   color: rgba(255, 255, 255, 0.8);
-//   margin-bottom: 50px;
-// }
-
 
 .form-group-label {
   display: none;
@@ -95,6 +88,9 @@ h1, h2, h3 {
   align-items: left;
 }
 
+.white-email-label {
+  display: none;
+}
 
 @media(max-width: 992px) {
   .banner-content {width: 700px;}

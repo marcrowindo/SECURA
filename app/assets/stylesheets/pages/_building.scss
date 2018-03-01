@@ -1,3 +1,4 @@
+/*-- PAGE 2 - FORM Buildings */
 
 body {
   margin: 0;
@@ -22,7 +23,7 @@ p {
   font-color: lightgrey;
 }
 
-/* Logo area and progress bar */
+/*-- Logo, phone and FAQ bar */
 .wrapper {
   max-width: 1000px;
   margin: 0px auto;
@@ -78,7 +79,7 @@ p {
   border-radius: 15px;
 }
 
-/* Vertical column with background image */
+/* Price estimate */
 .container-form-content {
   grid-column: 1 / span 1;
   grid-row: 1 / span 4;
@@ -100,13 +101,14 @@ p {
   padding: 10px;
   flex: 0 0 60%;
 }
+
 /* Rows */
 .form-heading {
   grid-column: 2 / span 2;
   grid-row: 1 / span 1;
   padding: 30px 50px;
 }
-/* The three building icons */
+/* Radio buttons */
 .form-email {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
@@ -145,7 +147,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .form-email label > input:checked + img {
   opacity: 1.0;
   transform: scale(1.0);
-  border: 2px solid transparent !important;
+  border: 0px solid transparent !important;
   transition: all 200ms ease;
 }
 .form-email label > input + img {
@@ -155,7 +157,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .radio-btn img[type="radio"]:checked + label .radio-image {
   opacity:1.0;
 }
-/* Email form */
+
+
+/* Insert email field */
 .form-email-buttons {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
@@ -181,7 +185,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   margin-bottom: 40px;
   color: grey;
 }
-/* Form buttons: next and back */
+
+
+/* Buttons back and next */
 .form-buttons {
   grid-column: 2 / span 2;
   grid-row: 4 / span 1;
@@ -230,23 +236,3 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   margin-bottom: 80px;
   color: grey;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// * {
-//   border: solid 1px red;
-// }
-
-
-
-

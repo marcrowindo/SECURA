@@ -4,17 +4,11 @@
           <h2>
             Tested alarm system specialists from your region
           </h2>
-          
 
+        <div class="form-inline">
           <%= simple_form_for  @request do |f|%>
-            <%= f.input :zip_code, as: :integer %>
-            <%= f.submit "Get Offers" %>
+            <%= f.input :zip_code, as: :integer, placeholder: "Your ZIP code" %>
+            <%= f.submit "Get Offers", :class => "btn" %>
           <% end %>
-
-
-
-<!--           <form class="form">
-                <input type="ZIP" placeholder="ZIP code">
-                <button type="submit">Get offers</button>
-          </form>
- -->
+        </div>
+</div>

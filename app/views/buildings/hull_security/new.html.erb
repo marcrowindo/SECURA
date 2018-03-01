@@ -1,6 +1,6 @@
-<h1>Hull Security</h1>
+<!-- PAGE 4 - FORM hull security -->
 
-<p>Would you like to be home whilst the system is active?</p>
+<h2>Would you like to be home whilst the system is active?</h2>
 
 <p>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</p>
 
@@ -8,9 +8,15 @@
 
 <%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
 
-
-<%= f.submit "Next"%>
+  <a href="#" id="button-back">Back</a>
+  <%= f.button :submit, "Next", id: "button-next" %>
 <% end %>
+
+
+
+<!-- Modal -->
+
+
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

@@ -1,4 +1,6 @@
-<h1>Doors</h1>
+<!-- PAGE 5 - FORM doors -->
+
+<h2>How many doors leading outside do you have on this floor?</h2>
 
 <%= form_tag building_doors_create_path(@building) do %>
   <% @floors.each do |floor| %>
@@ -10,6 +12,8 @@
     <% end %>
   <% end %>
   <div class="actions">
-    <%= submit_tag %>
+    <a href="#" id="button-back">Back</a>
+    <!-- <%= submit_tag %>-->
+    <input name="commit" type="submit" value="Next" id="button-next" />
   </div>
 <% end %>

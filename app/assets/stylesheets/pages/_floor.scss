@@ -105,81 +105,81 @@ p {
   grid-row: 1 / span 1;
   padding: 30px 50px;
 }
-/* The three building icons */
-.form-email {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
-  padding: 0px 50px;
-  display: flex;
-  justify-content: space-between;
-}
-.form-email p {
-  text-align: center;
-  color: gray;
-  font-size: 14px;
-  font-weight: lighter;
-}
-.form-icon-house, .form-icon-apartment, .form-icon-office {
-  img {
-    opacity: 0.6;
-    transform: scale(0.9);
-    margin: 0px 5px;
-  }
-  transition: all 200ms ease;
-}
-.form-email {
-label > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
-}
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border: 0px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border: 0px solid transparent !important;
-  border-radius: 4px;
-}
-}
-.form-email label > input:checked + img {
-  opacity: 1.0;
-  transform: scale(1.0);
-  border: 0px solid transparent !important;
-  transition: all 200ms ease;
-}
-.form-email label > input + img {
-  border: none;
-  transition: all 200ms ease;
-}
-.radio-btn img[type="radio"]:checked + label .radio-image {
-  opacity:1.0;
-}
-/* Email form */
-.form-email-buttons {
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 1;
-  padding: 0px 50px;
-}
-.form-email-buttons h6 {
-  font-size: 13px;
-  margin-top: 60px;
-}
-.form-group-label {
-  display:none;
-  font-size: 13px;
-  color: white;
-}
-.form-group select{
-  width: 65%;
-}
-.form-group input {
-  width: 65%;
-  border-radius: 6px;
-}
-.form-email-buttons p {
-  margin-bottom: 40px;
-  color: grey;
-}
+// /* The three building icons */
+// .form-email {
+//   grid-column: 2 / span 2;
+//   grid-row: 2 / span 1;
+//   padding: 0px 50px;
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .form-email p {
+//   text-align: center;
+//   color: gray;
+//   font-size: 14px;
+//   font-weight: lighter;
+// }
+// .form-icon-house, .form-icon-apartment, .form-icon-office {
+//   img {
+//     opacity: 0.6;
+//     transform: scale(0.9);
+//     margin: 0px 5px;
+//   }
+//   transition: all 200ms ease;
+// }
+// .form-email {
+// label > input{ /* HIDE RADIO */
+//   visibility: hidden; /* Makes input not-clickable */
+//   position: absolute; /* Remove input from document flow */
+// }
+// label > input + img{ /* IMAGE STYLES */
+//   cursor:pointer;
+//   border: 0px solid transparent;
+// }
+// label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+//   border: 0px solid transparent !important;
+//   border-radius: 4px;
+// }
+// }
+// .form-email label > input:checked + img {
+//   opacity: 1.0;
+//   transform: scale(1.0);
+//   border: 0px solid transparent !important;
+//   transition: all 200ms ease;
+// }
+// .form-email label > input + img {
+//   border: none;
+//   transition: all 200ms ease;
+// }
+// .radio-btn img[type="radio"]:checked + label .radio-image {
+//   opacity:1.0;
+// }
+// /* Email form */
+// .form-email-buttons {
+//   grid-column: 2 / span 2;
+//   grid-row: 3 / span 1;
+//   padding: 0px 50px;
+// }
+// .form-email-buttons h6 {
+//   font-size: 13px;
+//   margin-top: 60px;
+// }
+// .form-group-label {
+//   display:none;
+//   font-size: 13px;
+//   color: white;
+// }
+// .form-group select{
+//   width: 65%;
+// }
+// .form-group input {
+//   width: 65%;
+//   border-radius: 6px;
+// }
+// .form-email-buttons p {
+//   margin-bottom: 40px;
+//   color: grey;
+// }
 /* Form buttons: next and back */
 .form-buttons {
   grid-column: 2 / span 2;

@@ -1,9 +1,13 @@
+<!-- FORM 1 - Building -->
+
 <div class="wrapper">
   <div class="main-container">
 
     <div class="container-logo-help">
       <div class="container-logo">
-        <img src="<%= image_url('SECURA logo-blue.png') %>" alt="logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png", class: "some css class here" %>
+        <% end %>
       </div>
       <div class="container-help">
         <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
@@ -38,7 +42,7 @@
 
       <div class="form-email">
         <%= simple_form_for [@request, @building] do |b| %>
-        <%# b.input :object_type, collection: ['House', "Apartment", 'Office'], as: :radio_buttons %>
+
             <label class="form-icon-house">
               <input type="radio" name="building[object_type]" value="house">
               <img src="<%= image_url('house.png') %>" alt="house">
@@ -82,20 +86,7 @@
 
 </div>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="jquery.bootstrap.wizard.js"></script>
 
-<script>
-$(document).ready(function() {
-    $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-    var $total = navigation.find('li').length;
-    var $current = index+1;
-    var $percent = ($current/$total) * 100;
-    $('#rootwizard .progress-bar').css({width:$percent+'%'});
-  }});
-});
-</script> -->
 
 
 

@@ -1,11 +1,114 @@
-<h1>Hull Security</h1>
+<!-- FORM 4 - Hull security -->
 
-<p>Would you like to be home whilst the system is active?</p>
+<div class="wrapper">
+  <div class="main-container">
 
-<%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png", class: "some css class here" %>
+        <% end %>
+      </div>
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a href="#" target="_blank">FAQ</a>
+      </div>
+    </div>
 
-<%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+    <div class="container-progress">
+      <div id="rootwizard">
+        <div id="bar" class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+        </div>
 
 
-<%= f.submit "Next"%>
-<% end %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-content">
+      <div class="container-form-content">
+        <div class="container-price-estimate">
+          <h6>Your current price range estimate:</h6>
+          <h3>1.900 - 3.100 €</h3>
+
+        </div>
+      </div>
+      <div class="form-heading">
+        <h2>Would you like to be home whilst the system is active?</h2>
+      </div>
+
+
+        <!-- Logic of this page -->
+
+        <%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
+
+        <%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
+
+        <%= f.submit "Next"%>
+        <% end %>
+
+<!--       <div class="form-email">
+        <%= simple_form_for [@request, @building] do |b| %>
+
+            <label class="form-icon-house">
+              <input type="radio" name="building[object_type]" value="house">
+              <img src="<%= image_url('house.png') %>" alt="house">
+              <p class="icon-text-house">House</p>
+            </label>
+
+            <label class="form-icon-apartment">
+              <input type="radio" name="building[object_type]" value="apartment" />
+              <img src="<%= image_url('apartment.png') %>" alt="apartment">
+            <p class="icon-text-apartment">Apartment</p>
+            </label>
+
+            <label class="form-icon-office">
+              <input type="radio" name="building[object_type]" value="office" />
+              <img src="<%= image_url('office.png') %>" alt="office">
+            <p class="icon-text-office">Office</p>
+            </label>
+      </div>
+ -->
+
+      <div class="form-email-buttons">
+<!--         <h6>To continue, please provide your email below</h6>
+
+        <%= b.simple_fields_for :user do |u| %>
+        <%= u.input :email, placeholder: "Your email" %>
+        <% end %>
+        <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a href="#" target="_blank">here</a>.</p> -->
+
+        <div class="form-buttons">
+          <a href="#" id="button-back">Back</a>
+          <%= b.button :submit, "Next", id: "button-next" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
-<h1> Windows </h1>
+<!-- PAGE 6 - FORM windows -->
 
+<h2> How many windows do you have on this floor? </h2>
 
 <%= form_tag building_windows_create_path(@building) do %>
   <% @floors.each do |floor| %>
@@ -11,6 +12,7 @@
     <% end %>
   <% end %>
   <div class="actions">
-    <%= submit_tag %>
+    <a href="#" id="button-back">Back</a>
+    <input name="commit" type="submit" value="Next" id="button-next" />
   </div>
 <% end %>

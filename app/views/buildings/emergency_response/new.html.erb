@@ -1,6 +1,6 @@
-<h1>Emergency Response</h1>
+<!-- PAGE 10 - FORM emergency response services -->
 
-<p>Are you interested emergency response services?</p>
+<h2>Are you interested in emergency response services?</h2>
 
 <p>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</p>
 
@@ -8,9 +8,13 @@
 
 <%= f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
 
-
-<%= f.submit "Next"%>
+   <a href="#" id="button-back">Back</a>
+    <input name="commit" type="submit" value="Next" id="button-next" />
 <% end %>
+
+
+
+<!-- Modal -->
 
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

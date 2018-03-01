@@ -1,11 +1,13 @@
+<!-- PAGE 9 - FORM access count -->
 
 <div class="container text-center">
 
-  <h1>How many people should have access to your <%= @building.object_type %>?</h1>
+  <h2>How many people should have access to your <%= @building.object_type %>?</h2>
 
   <%= simple_form_for building_access_count_path (@building) do |b| %>
     <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>
     <h5><span id="slider-value">1</span></h5>
+    <a href="#" id="button-back">Back</a>
     <%= b.submit "Update Building" %>
   <% end %>
 

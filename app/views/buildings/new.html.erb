@@ -1,9 +1,14 @@
+<!-- PAGE 2 - FORM Buildings -->
+
 <div class="wrapper">
   <div class="main-container">
 
+    <!-- Logo, phone and FAQ bar -->
     <div class="container-logo-help">
       <div class="container-logo">
-        <img src="<%= image_url('SECURA logo-blue.png') %>" alt="logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
       </div>
       <div class="container-help">
         <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
@@ -11,75 +16,74 @@
       </div>
     </div>
 
+    <!-- Progress bar -->
     <div class="container-progress">
       <div id="rootwizard">
         <div id="bar" class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-        </div>
-
-
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
         </div>
       </div>
     </div>
-
-
-    <div class="container-content">
-      <div class="container-form-content">
-        <div class="container-price-estimate">
-          <h6>Your current price range estimate:</h6>
-          <h3>1.900 - 3.100 €</h3>
-
-        </div>
-      </div>
-      <div class="form-heading">
-        <h2>What would you like to secure?</h2>
-      </div>
-
-
-      <div class="form-email">
-        <%= simple_form_for [@request, @building] do |b| %>
-        <%# b.input :object_type, collection: ['House', "Apartment", 'Office'], as: :radio_buttons %>
-            <label class="form-icon-house">
-              <input type="radio" name="building[object_type]" value="house">
-              <img src="<%= image_url('house.png') %>" alt="house">
-              <p class="icon-text-house">House</p>
-            </label>
-
-            <label class="form-icon-apartment">
-              <input type="radio" name="building[object_type]" value="apartment" />
-              <img src="<%= image_url('apartment.png') %>" alt="apartment">
-            <p class="icon-text-apartment">Apartment</p>
-            </label>
-
-            <label class="form-icon-office">
-              <input type="radio" name="building[object_type]" value="office" />
-              <img src="<%= image_url('office.png') %>" alt="office">
-            <p class="icon-text-office">Office</p>
-            </label>
-      </div>
-
-
-      <div class="form-email-buttons">
-        <h6>To continue, please provide your email below</h6>
-
-        <%= b.simple_fields_for :user do |u| %>
-        <%= u.input :email, placeholder: "Your email" %>
-        <% end %>
-        <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
-
-        <div class="form-buttons">
-          <a href="#" id="button-back">Back</a>
-          <%= b.button :submit, "Next", id: "button-next" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>Copyright © 2018 by Secura AG, all rights reserved</p>
-    </div>
-
   </div>
+
+  <!-- Price estimate  -->
+  <div class="container-content">
+    <div class="container-form-content">
+      <div class="container-price-estimate">
+        <h6>Your current price range estimate:</h6>
+        <h3>1.900 - 3.100 €</h3>
+      </div>
+    </div>
+
+    <div class="form-heading">
+      <h2>What would you like to secure?</h2>
+    </div>
+
+    <!-- Radio buttons -->
+    <div class="form-email">
+      <%= simple_form_for [@request, @building] do |b| %>
+      <label class="form-icon-house">
+        <input type="radio" name="building[object_type]" value="house">
+        <img src="<%= image_url('house.png') %>" alt="house">
+        <p class="icon-text-house">House</p>
+      </label>
+
+      <label class="form-icon-apartment">
+        <input type="radio" name="building[object_type]" value="apartment" />
+        <img src="<%= image_url('apartment.png') %>" alt="apartment">
+        <p class="icon-text-apartment">Apartment</p>
+      </label>
+
+      <label class="form-icon-office">
+        <input type="radio" name="building[object_type]" value="office" />
+        <img src="<%= image_url('office.png') %>" alt="office">
+        <p class="icon-text-office">Office</p>
+      </label>
+    </div>
+
+    <!-- Insert email field -->
+    <div class="form-email-buttons">
+      <h6>To continue, please provide your email below</h6>
+
+      <%= b.simple_fields_for :user do |u| %>
+      <%= u.input :email, placeholder: "Your email", label_html: { class: 'white-email-label' } %>
+      <% end %>
+      <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
+
+    <!-- Buttons back and next -->
+      <div class="form-buttons">
+        <a href="#" id="button-back">Back</a>
+        <%= b.button :submit, "Next", id: "button-next" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+  </div>
+
+</div>
 
 </div>
 
@@ -94,38 +98,14 @@
         <h5 class="modal-title text-center" id="exampleModalLongTitle"><strong>Privacy Policy</strong></h5>
         <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
  --><!--           <span aria-hidden="true">&times;</span>
-        </button> -->
-      </div>
-      <div class="modal-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias cupiditate autem corrupti sequi, dolor a dignissimos dolores repellat, placeat atque nam voluptatibus quod in doloribus pariatur ratione tempora velit, illum.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+</button> -->
 </div>
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="jquery.bootstrap.wizard.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-    var $total = navigation.find('li').length;
-    var $current = index+1;
-    var $percent = ($current/$total) * 100;
-    $('#rootwizard .progress-bar').css({width:$percent+'%'});
-  }});
-});
-</script> -->
-
-
-
-
-
-
-
-
-
+<div class="modal-body">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias cupiditate autem corrupti sequi, dolor a dignissimos dolores repellat, placeat atque nam voluptatibus quod in doloribus pariatur ratione tempora velit, illum.
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>

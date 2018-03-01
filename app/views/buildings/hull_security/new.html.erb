@@ -1,67 +1,13 @@
-<!-- FORM 4 - Hull security -->
+<h1>Hull Security</h1>
 
-<div class="wrapper">
-  <div class="main-container">
-
-    <div class="container-logo-help">
-      <div class="container-logo">
-        <%= link_to root_path do %>
-        <%= image_tag "SECURA logo-blue.png", class: "some css class here" %>
-        <% end %>
-      </div>
-      <div class="container-help">
-        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
-        <a href="#" target="_blank">FAQ</a>
-      </div>
-    </div>
-
-    <div class="container-progress">
-      <div id="rootwizard">
-        <div id="bar" class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-        </div>
-
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container-content">
-      <div class="container-form-content">
-        <div class="container-price-estimate">
-          <h6>Your current price range estimate:</h6>
-          <h3>1.900 - 3.100 €</h3>
-
-        </div>
-      </div>
-      <div class="form-heading">
-        <h2>Would you like to be home whilst the system is active?</h2>
-      </div>
-
-
-        
-
-        <div class="form-buttons">
-          <a href="#" id="button-back">Back</a>
-          <%= b.button :submit, "Next", id: "button-next" %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>Copyright © 2018 by Secura AG, all rights reserved</p>
-    </div>
-
-  </div>
-
-</div>
-
+<p>Would you like to be home whilst the system is active?</p>
 
 <p>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</p>
 
 <%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
+
+<%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
 
 <%= f.submit "Next"%>
 <% end %>
@@ -83,4 +29,4 @@
       </div>
     </div>
   </div>
-</div> 
+</div>

@@ -1,11 +1,61 @@
 <!-- PAGE 8 - FORM Vds certificate -->
 
-<h2>Do you require VdS certification?</h2>
+<div class="wrapper">
+  <div class="main-container">
 
-<%= simple_form_for building_vds_create_path (@building) do |b| %>
-  <%= b.input :vds_certification, collection: ["No", "VdS A (Home)", "VdS B", "VdS C"], as: :radio_buttons %>
+    <!-- Logo, phone and FAQ bar -->
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
+      </div>
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a href="#" target="_blank">FAQ</a>
+      </div>
+    </div>
 
-  <a href="#" id="button-back">Back</a>
-  <%= b.submit "Update Building" %>
+    <!-- Progress bar -->
+    <div class="container-progress">
+      <div id="rootwizard">
+        <div id="bar" class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+      </div>
+    </div>
 
-<% end %>
+    <!-- Price estimate  -->
+    <div class="container-content">
+      <div class="container-form-content">
+        <div class="container-price-estimate">
+          <h6>Your current price range estimate:</h6>
+          <h3>1.900 - 3.100 €</h3>
+        </div>
+      </div>
+
+      <div class="form-heading">
+        <h2>Do you require VdS certification?</h2>
+      </div>
+
+    <!-- Form content  -->
+      <div class="form-on-every-page">
+
+        <%= simple_form_for building_vds_create_path (@building) do |b| %>
+          <%= b.input :vds_certification, collection: ["No", "VdS A (Home)", "VdS B", "VdS C"], as: :radio_buttons %>
+
+          <a href="#" id="button-back">Back</a>
+          <%= b.submit "Update Building" %>
+
+        <% end %>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+  </div>
+
+</div>
+</div>

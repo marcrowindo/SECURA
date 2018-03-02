@@ -108,7 +108,15 @@ p {
   grid-row: 1 / span 1;
   padding: 30px 50px;
 }
-/* Radio buttons */
+
+/* Form logic on every page*/
+.form-on-every-page {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  padding: 30px 50px;
+}
+
+/* Radio buttons on buildings page*/
 .form-email {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
@@ -157,6 +165,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .radio-btn img[type="radio"]:checked + label .radio-image {
   opacity:1.0;
 }
+
+
+
 
 
 /* Insert email field */

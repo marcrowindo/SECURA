@@ -12,7 +12,7 @@
       </div>
       <div class="container-help">
         <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
-        <a href="#" target="_blank">FAQ</a>
+        <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
       </div>
     </div>
 
@@ -44,13 +44,14 @@
 
         <div class="container-text-align">
 
-          <h5>Within the next 5 working days you will receive 5 free offers from trusted SECURA partners from your region. If you have any remaining questions please refer to our <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a> or get in touch with our security experts via telephone or email.</h5>
+          <h6>Within the next 5 working days you will receive 5 free offers from trusted SECURA partners from your region. If you have any remaining questions please refer to our <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a> or get in touch with our security experts via telephone or email.</h6>
 
 
 
-          <h5>Your reference number was sent to <%= @user.email %></h5>
+          <h6>Your reference number was sent to <br><br><b><%= @user.email %></b></h6>
 
-        <a href="#">info@secura.de</a>
+          <h6>Should you have any more questions, please send email to <a href="#">info@secura.de</a></h6>
+
         </div>
 
     </div>

@@ -28,7 +28,7 @@
 
     <!-- Price estimate  -->
     <div class="container-content">
-      <div class="container-form-content">
+      <div class="container-form-content-people">
         <div class="container-price-estimate">
           <h6>Your current price range estimate:</h6>
           <h3>1.900 - 3.100 €</h3>
@@ -42,7 +42,7 @@
     <!-- Form content  -->
       <div class="form-on-every-page">
 
-        <div class="container text-center">
+        <div class="container-text-center">
 
           <%= simple_form_for building_access_count_path (@building) do |b| %>
             <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>

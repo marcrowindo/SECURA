@@ -15,6 +15,10 @@ class Floors::DoorsController < ApplicationController
       floor.doors = door_amount
       floor.save
     end
+    request = @building.request
+    request.set_price_min
+    request.set_price_max
+    request.save
     redirect_to building_floors_windows_path(@building)
   end
 end

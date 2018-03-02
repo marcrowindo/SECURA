@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227113754) do
+ActiveRecord::Schema.define(version: 20180302120322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180227113754) do
     t.bigint "request_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "vds_multiple"
     t.index ["request_id"], name: "index_buildings_on_request_id"
   end
 
@@ -35,6 +36,9 @@ ActiveRecord::Schema.define(version: 20180227113754) do
     t.bigint "building_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "motion_detector_min"
+    t.integer "motion_detector_max"
+    t.integer "windows_and_doors_sensor"
     t.index ["building_id"], name: "index_floors_on_building_id"
   end
 

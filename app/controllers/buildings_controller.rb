@@ -22,7 +22,8 @@ class BuildingsController < ApplicationController
     # if no user
     else
       @user = User.new(user_params)
-      @user.request = Request.find(params[:request_id])
+      request = Request.find(params[:request_id])
+      @user.request = request
       @user.save
     end
 

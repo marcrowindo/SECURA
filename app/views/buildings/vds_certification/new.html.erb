@@ -1,7 +1,4 @@
-<ul>
-  <li>min price: <%= @request.price_min %></li>
-  <li>max price: <%= @request.price_max %></li>
-</ul>
+
 
 <!-- PAGE 8 - FORM Vds certificate -->
 
@@ -36,7 +33,7 @@
       <div class="container-form-content-certification">
         <div class="container-price-estimate">
           <h6>Your current price range estimate:</h6>
-          <h3>1.900 - 3.100 €</h3>
+          <h3><%= @request.price_min %> - <%= @request.price_max %> €</h3>
         </div>
       </div>
 

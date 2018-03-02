@@ -1,15 +1,65 @@
-<!-- PAGE 9 - FORM access count -->
+<!-- PAGE 9 - FORM access count with slider -->
 
-<div class="container text-center">
+<div class="wrapper">
+  <div class="main-container">
 
-  <h2>How many people should have access to your <%= @building.object_type %>?</h2>
+    <!-- Logo, phone and FAQ bar -->
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
+      </div>
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a href="#" target="_blank">FAQ</a>
+      </div>
+    </div>
 
-  <%= simple_form_for building_access_count_path (@building) do |b| %>
-    <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>
-    <h5><span id="slider-value">1</span></h5>
-    <a href="#" id="button-back">Back</a>
-    <%= b.submit "Update Building" %>
-  <% end %>
+    <!-- Progress bar -->
+    <div class="container-progress">
+      <div id="rootwizard">
+        <div id="bar" class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price estimate  -->
+    <div class="container-content">
+      <div class="container-form-content">
+        <div class="container-price-estimate">
+          <h6>Your current price range estimate:</h6>
+          <h3>1.900 - 3.100 €</h3>
+        </div>
+      </div>
+
+      <div class="form-heading">
+        <h2>How many people should have access to your <%= @building.object_type %>?</h2>
+      </div>
+
+    <!-- Form content  -->
+      <div class="form-on-every-page">
+
+        <div class="container text-center">
+
+          <%= simple_form_for building_access_count_path (@building) do |b| %>
+            <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>
+            <h5><span id="slider-value">1</span></h5>
+            <a href="#" id="button-back">Back</a>
+            <%= b.submit "Update Building" %>
+          <% end %>
+
+        </div>
+
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+  </div>
 
 </div>
-
+</div>

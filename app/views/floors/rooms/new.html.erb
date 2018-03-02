@@ -1,18 +1,69 @@
 <!-- PAGE 7 - FORM rooms -->
 
-<h2>How many rooms do you have on this floor?</h2>
+<div class="wrapper">
+  <div class="main-container">
 
-<%= form_tag building_rooms_create_path(@building) do %>
-  <% @floors.each do |floor| %>
-    <%= fields_for 'floors[]', floor do |p| %>
-      <div class="field">
-        <%= p.label floor.floor_type %><br>
-        <%= p.text_field :rooms %>
+    <!-- Logo, phone and FAQ bar -->
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
       </div>
-    <% end %>
-  <% end %>
-  <div class="actions">
-    <a href="#" id="button-back">Back</a>
-    <input name="commit" type="submit" value="Next" id="button-next" />
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a href="#" target="_blank">FAQ</a>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="container-progress">
+      <div id="rootwizard">
+        <div id="bar" class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price estimate  -->
+    <div class="container-content">
+      <div class="container-form-content">
+        <div class="container-price-estimate">
+          <h6>Your current price range estimate:</h6>
+          <h3>1.900 - 3.100 €</h3>
+        </div>
+      </div>
+
+      <div class="form-heading">
+        <h2>How many rooms do you have on this floor?</h2>
+      </div>
+
+
+    <!-- Form content  -->
+      <div class="form-on-every-page">
+
+        <%= form_tag building_rooms_create_path(@building) do %>
+          <% @floors.each do |floor| %>
+            <%= fields_for 'floors[]', floor do |p| %>
+              <div class="field">
+                <%= p.label floor.floor_type %><br>
+                <%= p.text_field :rooms %>
+              </div>
+            <% end %>
+          <% end %>
+          <div class="actions">
+            <a href="#" id="button-back">Back</a>
+            <input name="commit" type="submit" value="Next" id="button-next" />
+          </div>
+        <% end %>
+
+    </div>
   </div>
-<% end %>
+
+  <div class="copyright">
+    <p>Copyright © 2018 by Secura AG, all rights reserved</p>
+  </div>
+
+</div>
+</div>

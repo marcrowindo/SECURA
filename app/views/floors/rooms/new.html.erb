@@ -41,26 +41,27 @@
       </div>
 
 
-    <!-- Form content  -->
+      <!-- Form content  -->
       <div class="form-on-every-page">
 
         <%= form_tag building_rooms_create_path(@building) do %>
-          <% @floors.each do |floor| %>
-            <%= fields_for 'floors[]', floor do |p| %>
-              <div class="field">
-                <%= p.label floor.floor_type %><br>
-                <%= p.text_field :rooms %>
-              </div>
-            <% end %>
-          <% end %>
-          <div class="actions">
-            <a href="#" id="button-back">Back</a>
-            <input name="commit" type="submit" value="Next" id="button-next" />
-          </div>
+        <% @floors.each do |floor| %>
+        <%= fields_for 'floors[]', floor do |p| %>
+        <div class="field">
+          <%= p.label floor.floor_type %><br>
+          <%= p.text_field :rooms %>
+        </div>
         <% end %>
+        <% end %>
+      </div>
+
+      <div class="form-buttons-on-every-page">
+        <a href="#" id="button-back">Back</a>
+        <input name="commit" type="submit" value="Next" id="button-next" />
+      </div>
+      <% end %>
 
     </div>
-  </div>
 
 <!--   <div class="copyright">
     <p>Copyright © 2018 by Secura AG, all rights reserved</p>

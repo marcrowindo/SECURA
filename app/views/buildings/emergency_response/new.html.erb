@@ -40,7 +40,7 @@
         <h2>Are you interested in emergency response services?</h2>
       </div>
 
-    <!-- Form content  -->
+      <!-- Form content  -->
       <div class="form-on-every-page">
         <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
 
@@ -48,6 +48,9 @@
 
         <%= f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
 
+      </div>
+
+      <div class="form-buttons-on-every-page">
         <a href="#" id="button-back">Back</a>
         <input name="commit" type="submit" value="Next" id="button-next" />
         <% end %>

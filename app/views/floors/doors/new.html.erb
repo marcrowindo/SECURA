@@ -31,8 +31,6 @@
     <div class="container-content">
       <div class="container-form-content-door">
         <div class="container-price-estimate">
-<!--           <h6>Your current price range estimate:</h6>
-          <h3>1.900 - 3.100 €</h3> -->
         </div>
       </div>
 
@@ -41,26 +39,27 @@
       </div>
 
 
-    <!-- Form content  -->
+      <!-- Form content  -->
       <div class="form-on-every-page">
 
         <%= form_tag building_doors_create_path(@building) do %>
-          <% @floors.each do |floor| %>
-            <%= fields_for 'floors[]', floor do |p| %>
-              <div class="field">
-                <%= p.label floor.floor_type %><br>
-                <%= p.text_field :doors %>
-              </div>
-            <% end %>
-          <% end %>
-          <div class="actions">
-            <a href="#" id="button-back">Back</a>
-            <!-- <%= submit_tag %>-->
-            <input name="commit" type="submit" value="Next" id="button-next" />
-          </div>
+        <% @floors.each do |floor| %>
+        <%= fields_for 'floors[]', floor do |p| %>
+        <div class="field">
+          <%= p.label floor.floor_type %><br>
+          <%= p.text_field :doors %>
+        </div>
         <% end %>
+        <% end %>
+      </div>
 
+      <div class="form-buttons-on-every-page">
+        <a href="#" id="button-back">Back</a>
+        <input name="commit" type="submit" value="Next" id="button-next" />
+      </div>
+      <% end %>
     </div>
+
   </div>
 
 <!--   <div class="copyright">

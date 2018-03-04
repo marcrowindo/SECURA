@@ -16,6 +16,7 @@ h2 {
 
 h6 {
   font-size: 16px;
+  line-height: 21px;
 }
 
 p {
@@ -95,7 +96,122 @@ p {
 }
 
 
-/* Main grid */
+/* Main grid only on Buildings page */
+
+.container-content-buildings-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 16% 30% 39% 15%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  height: 560px;
+  background-color: white;
+}
+
+/* Form heading only on buildings page */
+.form-heading-buildings-page {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+  padding: 30px 50px;
+}
+
+/* Radio buttons only on buildings page*/
+.form-icons-buildings-page {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-icons-buildings-page p {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.form-icon-house, .form-icon-apartment, .form-icon-office {
+  img {
+    opacity: 0.6;
+    transform: scale(0.9);
+    margin: 20px 5px;
+  }
+  transition: all 200ms ease;
+}
+.form-icons-buildings-page {
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #3A9FEE;
+  border-radius: 4px;
+}
+}
+.form-icons-buildings-page label > input:checked + img {
+  opacity: 1.0;
+  transform: scale(1.0);
+  border: 0px solid transparent !important;
+  transition: all 200ms ease;
+}
+.form-icons-buildings-page label > input + img {
+  border: none;
+  transition: all 200ms ease;
+}
+.radio-btn img[type="radio"]:checked + label .radio-image {
+  opacity:1.0;
+}
+
+
+/* Insert email field only on buildings page */
+.form-give-us-email {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  padding: 0px 50px;
+}
+.form-give-us-email h6 {
+  font-size: 13px;
+  margin-top: 60px;
+}
+.form-group-label {
+  display:none;
+  font-size: 13px;
+  color: white;
+}
+.form-group select{
+  width: 65%;
+}
+.form-group input {
+  width: 65%;
+  border-radius: 6px;
+}
+.form-give-us-email p {
+  margin-bottom: 40px;
+  color: grey;
+}
+
+/* Buttons back and next only on buildings page */
+.form-buttons-buildings-page {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+
+
+
+
+
+
+
+
+/* Main grid on every page*/
 
 .container-content {
   display: grid;
@@ -106,6 +222,7 @@ p {
   height: 560px;
   background-color: white;
 }
+
 
 
 /* 2 - Price estimate building */
@@ -134,7 +251,7 @@ p {
 /* 3 - Price estimate floor */
 .container-form-content-floor {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('3floor.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -151,7 +268,7 @@ p {
 /* 4 - Price estimate hull*/
 .container-form-content-hull {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('9people.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -168,7 +285,7 @@ p {
 /* 5 - Price estimate door*/
 .container-form-content-door {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.7) 50%, rgba(86, 204, 242, 0.4)), image_url('5door.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -185,7 +302,7 @@ p {
 /* 6 - Price estimate window*/
 .container-form-content-window {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('6window.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -202,7 +319,7 @@ p {
 /* 7 - Price estimate room*/
 .container-form-content-room {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('7room.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -219,7 +336,7 @@ p {
 /* 8 - Price estimate certification */
 .container-form-content-certification {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('8certification.jpeg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -236,7 +353,7 @@ p {
 /* 9 - Price estimate people*/
 .container-form-content-people {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('9people.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -253,7 +370,7 @@ p {
 /* 10 - Price estimate emergency*/
 .container-form-content-emergency {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('10emergency.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -270,7 +387,7 @@ p {
 /* 11 - Price estimate thanks*/
 .container-form-content-thanks {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('11thanks.jpeg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -286,6 +403,7 @@ p {
 
 
 /* Rows */
+
 .form-heading {
   grid-column: 2 / span 2;
   grid-row: 1 / span 1;
@@ -293,8 +411,8 @@ p {
 }
 
 
-/* Form logic only on floor page */
 
+/* Form logic only on floor page */
 .form-floor {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
@@ -309,14 +427,10 @@ p {
   align-items: center;
   width: 100%;
 }
-
 /* all the form checkboxes (not labels) */
 .checkbox input[type="checkbox"] {
   margin: 5px -32px;
 }
-
-
-
 
 
 
@@ -330,89 +444,13 @@ p {
   padding: 30px 50px;
 }
 
-/* Radio buttons on buildings page*/
-.form-email {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
-  padding: 0px 50px;
-  display: flex;
-  justify-content: space-between;
-}
-.form-email p {
-  text-align: center;
-  color: gray;
-  font-size: 14px;
-  font-weight: lighter;
-}
-.form-icon-house, .form-icon-apartment, .form-icon-office {
-  img {
-    opacity: 0.6;
-    transform: scale(0.9);
-    margin: 0px 5px;
-  }
-  transition: all 200ms ease;
-}
-.form-email {
-label > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
-}
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:2px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid #3A9FEE;
-  border-radius: 4px;
-}
-}
-.form-email label > input:checked + img {
-  opacity: 1.0;
-  transform: scale(1.0);
-  border: 0px solid transparent !important;
-  transition: all 200ms ease;
-}
-.form-email label > input + img {
-  border: none;
-  transition: all 200ms ease;
-}
-.radio-btn img[type="radio"]:checked + label .radio-image {
-  opacity:1.0;
-}
 
 
 
 
 
-/* Insert email field */
-.form-email-buttons {
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 1;
-  padding: 0px 50px;
-}
-.form-email-buttons h6 {
-  font-size: 13px;
-  margin-top: 60px;
-}
-.form-group-label {
-  display:none;
-  font-size: 13px;
-  color: white;
-}
-.form-group select{
-  width: 65%;
-}
-.form-group input {
-  width: 65%;
-  border-radius: 6px;
-}
-.form-email-buttons p {
-  margin-bottom: 40px;
-  color: grey;
-}
 
-
-/* Buttons back and next */
+/* Buttons back and next on every page */
 
 .form-buttons-on-every-page {
   grid-column: 2 / span 2;
@@ -423,13 +461,13 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   padding: 40px 30px;
 }
 
-.form-buttons {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .form-buttons {
+//   grid-column: 2 / span 2;
+//   grid-row: 4 / span 1;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 #button-back {
   color: #999999;
   border: 1px solid #999999;
@@ -466,6 +504,43 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   margin-top: 5px;
   margin-bottom: 80px;
   color: grey;
+}
+
+
+/* Only on thank you page */
+
+.banner-thank-you-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.banner-content-thanks {
+  flex: 0 0 50%;
+  height: auto;
+  margin-left: 100px;
+}
+
+#button-orange {
+  margin: 100px 0px;
+  background-color: #FC5E25;
+  border: 0px;
+  padding: 10px 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  color: white;
+  text-decoration: none;
+}
+#button-orange:hover {
+  background-color: #f94b1b;
+}
+
+.banner-content-thanks h4 {
+  margin-bottom: 30px;
 }
 
 

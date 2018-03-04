@@ -42,17 +42,22 @@
       </div>
 
 
-    <!-- Form content  -->
-      <div class="form-on-every-page">
+      <!-- Form content  -->
+      <div class="form-floor">
+        <div class="form-on-every-page-floor">
 
-        <%= simple_form_for [@building, @floor] do |f| %>
-          <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
+          <%= simple_form_for [@building, @floor] do |f| %>
+            <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
 
+        </div>
+      </div>
+      <div class="form-buttons-on-every-page">
           <a href="#" id="button-back">Back</a>
-          <%= f.button :submit, "Next", id: "button-next" %>
-        <% end %>
+            <%= f.button :submit, "Next", id: "button-next" %>
+          <% end %>
+      </div>
 
-    </div>
+
   </div>
 
 <!--   <div class="copyright">

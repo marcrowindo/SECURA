@@ -23,7 +23,6 @@ p {
   font-color: lightgrey;
 }
 
-/*-- Logo, phone and FAQ bar */
 .wrapper {
   margin: 0px auto;
   background-size: 100vh;
@@ -31,20 +30,20 @@ p {
   height: 100%;
   background-image: linear-gradient(-225deg, rgba(255, 255, 255, 0.1) 4%, rgba(255, 255, 255, 0.1)), image_url('background-polygon.png');
   background-repeat:no-repeat;
-  background-size:cover;
-  overflow:hidden;
+  background-size: cover;
+  overflow: hidden;
 }
-
 .main-container {
   margin: 10px auto;
   max-width: 900px;
-  height: 800px;
+  height: 100vh;
 }
 
+/*-- Logo, phone and FAQ bar */
 .container-logo-help {
   display: flex;
-  margin: 0 auto;
-  padding: 10px;
+  margin: 0 auto 10px auto;
+  padding: 10px 0px;
   justify-content: space-between;
 }
 .container-logo {
@@ -53,7 +52,7 @@ p {
 .container-progress {
   flex-grow: 1;
   margin: 0px 35px;
-  padding: 0px;
+  padding: 20px;
 }
 .progress {
   height: 5px;
@@ -64,6 +63,7 @@ p {
   display: flex;
   flex: 0 0 20%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .container-logo img {
@@ -73,11 +73,11 @@ p {
 }
 .container-help p {
   color: grey;
-  padding: 0px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   font-size: 12px;
 }
 .container-help i {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .container-help a {
   border: 1px solid grey;
@@ -94,15 +94,16 @@ p {
   opacity: 1;
 }
 
+
 /* Main grid */
 
 .container-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 25% 25% 50%;
+  grid-template-rows: 25% 55% 20%;
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
   border-radius: 15px;
-  height: 600px;
+  height: 560px;
   background-color: white;
 }
 
@@ -291,7 +292,38 @@ p {
   padding: 30px 50px;
 }
 
+
+/* Form logic only on floor page */
+
+.form-floor {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.form-on-every-page-floor {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  padding: 30px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+/* all the form checkboxes (not labels) */
+.checkbox input[type="checkbox"] {
+  margin: 5px -32px;
+}
+
+
+
+
+
+
+
+
 /* Form logic on every page*/
+
 .form-on-every-page {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
@@ -381,6 +413,16 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 
 /* Buttons back and next */
+
+.form-buttons-on-every-page {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+}
+
 .form-buttons {
   grid-column: 2 / span 2;
   grid-row: 4 / span 1;
@@ -404,7 +446,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   color: #999999;
 }
 #button-next {
-  margin: 10px 30px;
+  margin: 30px 30px;
   background-color: #FC5E25;
   border: 0px;
   padding: 10px 50px;
@@ -417,10 +459,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 #button-next:hover {
   background-color: #f94b1b;
-}
-
-.form-buttons {
-  margin-bottom: 30px;
 }
 
 .copyright {

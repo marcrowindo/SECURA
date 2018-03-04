@@ -27,35 +27,59 @@ p {
 .wrapper {
   margin: 0px auto;
   background-size: 100vh;
-  padding: 7px 133px;
-  height:100%;
+  padding: 0px 133px;
+  height: 100%;
   background-image: linear-gradient(-225deg, rgba(255, 255, 255, 0.1) 4%, rgba(255, 255, 255, 0.1)), image_url('background-polygon.png');
   background-repeat:no-repeat;
   background-size:cover;
   overflow:hidden;
 }
 
-.container-logo img {
-  padding-top: 20px;
-  width: 150px;
+.main-container {
+  margin: 10px auto;
+  max-width: 900px;
+  height: 800px;
 }
+
 .container-logo-help {
   display: flex;
   margin: 0 auto;
-  padding: 15px 0px;
-  margin-bottom: 20px;
+  padding: 10px;
   justify-content: space-between;
+}
+.container-logo {
+  flex: 0 0 15%;
+}
+.container-progress {
+  flex-grow: 1;
+  margin: 0px 35px;
+  padding: 0px;
+}
+.progress {
+  height: 5px;
+  margin-bottom: 0px;
+
+}
+.container-help {
+  display: flex;
+  flex: 0 0 20%;
+  align-items: center;
+}
+
+.container-logo img {
+  padding-top: 0px;
+  margin: 0px;
+  width: 150px;
 }
 .container-help p {
   color: grey;
-  padding: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   font-size: 12px;
 }
 .container-help i {
   margin-right: 10px;
 }
 .container-help a {
-  float: right;
   border: 1px solid grey;
   border-radius: 20px;
   padding: 2px 13px;
@@ -401,7 +425,13 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .copyright {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 80px;
   color: grey;
 }
+
+
+
+// * {
+//   border: solid 1px red;
+// }

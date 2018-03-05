@@ -1,4 +1,7 @@
+//= require jquery
 //= require rails-ujs
-//= require_tree .
 //= require bootstrap-slider
+//= require bootstrap-datepicker
+//= require_tree .
+
 

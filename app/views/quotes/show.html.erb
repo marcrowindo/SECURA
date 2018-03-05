@@ -1,0 +1,31 @@
+<p>Thanks for your interest, <%= @user.email %></p>
+
+<h4>Here is a recap of your request:</h4>
+<ul>
+    <li><%= @request.building.object_type.capitalize %></li>
+    <li>Floors: <%= @request.building.floors.count %></li>
+    <li>VdS Certification: <%= @request.building.vds_certification %></li>
+    <li>Security Hull: <%= @request.building.security_hull %></li>
+    <li>Emergency Response: <%= @request.building.emergency_response %></li>
+  <% @request.building.floors.each do |floor| %>
+    <li><%= floor.floor_type %></li>
+    <li>Windows: <%= floor.windows %></li>
+    <li>Rooms: <%= floor.rooms %></li>
+    <li>Doors <%= floor.doors %></li>
+    <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
+  <% end %>
+  <p>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</p>
+</ul>
+
+<h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your house for <%= @quote.price %>€</h3>
+
+<h6>Contact him: <%= @quote.phone_number %></h6>
+
+<%= simple_form_for [@quote, @booking] do |f| %>
+  <%= f.input :date, as: :string, input_html: { class: 'datepicker' } %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+

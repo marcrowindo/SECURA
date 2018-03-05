@@ -2,6 +2,7 @@ class Request < ApplicationRecord
   has_one :user
   accepts_nested_attributes_for :user
   has_one :building
+  has_many :quotes
   validates :zip_code, presence: true
 
   # PRICE

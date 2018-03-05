@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180302120322) do
+ActiveRecord::Schema.define(version: 20180305142657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "quote_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.index ["quote_id"], name: "index_bookings_on_quote_id"
+  end
 
   create_table "buildings", force: :cascade do |t|
     t.integer "access_count"
@@ -42,6 +50,18 @@ ActiveRecord::Schema.define(version: 20180302120322) do
     t.index ["building_id"], name: "index_floors_on_building_id"
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.bigint "request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "supplier_name"
+    t.string "supplier_address"
+    t.string "phone_number"
+    t.integer "price"
+    t.string "token"
+    t.index ["request_id"], name: "index_quotes_on_request_id"
+  end
+
   create_table "requests", force: :cascade do |t|
     t.integer "zip_code"
     t.integer "price_min"
@@ -60,7 +80,9 @@ ActiveRecord::Schema.define(version: 20180302120322) do
     t.index ["request_id"], name: "index_users_on_request_id"
   end
 
+  add_foreign_key "bookings", "quotes"
   add_foreign_key "buildings", "requests"
   add_foreign_key "floors", "buildings"
+  add_foreign_key "quotes", "requests"
   add_foreign_key "users", "requests"
 end

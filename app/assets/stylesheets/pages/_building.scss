@@ -200,7 +200,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 30px;
+  padding: 0px 30px 30px 30px;
 }
 
 
@@ -233,7 +233,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
-  background-position: 53% 90%;
+  background-position: 30% 90%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -307,7 +307,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
-  background-position: 37% 71%;
+  background-position: 19% 71%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -320,11 +320,11 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .container-form-content-room {
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
-  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('7room.jpg');
+  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('8certification.jpeg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
-  background-position: 32% 88%;
+  background-position: 54% 88%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -337,7 +337,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .container-form-content-certification {
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
-  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('8certification.jpeg');
+  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('7room.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
@@ -349,6 +349,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   min-height: 0;
   min-width: 0;
 }
+
 
 /* 9 - Price estimate people*/
 .container-form-content-people {
@@ -374,8 +375,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('10emergency.jpg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  background-size: 900px auto;
-  background-position: 60% 95%;
+  background-size: 800px auto;
+  background-position: 80% 55%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -548,3 +549,58 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 // * {
 //   border: solid 1px red;
 // }
+
+
+// Media
+
+@media(max-width: 992px) {
+  .wrapper {
+    padding: 0px 100px;
+  }
+  .container-content-buildings-page {
+    display: block;
+  }
+  .container-form-content-building {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    height: 150px;
+    background-position: 30% 85%;
+  }
+}
+
+@media(max-width: 768px) {
+  .wrapper {
+    padding: 0px 20px;
+  }
+  .container-content-buildings-page {
+    display: block;
+  }
+  .container-form-content-building {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    height: 150px;
+    background-position: 30% 85%;
+  }
+}
+
+
+@media(max-width: 480px) {
+  .wrapper {
+    padding: 0px 15px;
+  }
+  .container-logo-help {
+    display: block;
+  }
+  .container-content-buildings-page {
+    display: block;
+  }
+  .container-form-content-building {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    height: 150px;
+    background-position: 30% 85%;
+  }
+}

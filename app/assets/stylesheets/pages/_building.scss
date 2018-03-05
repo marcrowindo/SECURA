@@ -341,7 +341,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
-  background-position: 50% 76%;
+  background-position: 56% 1%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -434,9 +434,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 
-
-
-
 /* Form logic on every page*/
 
 .form-on-every-page {
@@ -444,11 +441,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   grid-row: 2 / span 1;
   padding: 30px 50px;
 }
-
-
-
-
-
 
 
 /* Buttons back and next on every page */
@@ -603,4 +595,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     height: 150px;
     background-position: 30% 85%;
   }
+  .container-content {
+    display: block;
 }
+
+}
+

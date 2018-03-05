@@ -1,11 +1,12 @@
-<h4>Thanks for your interest, <%= @user.email %></h4>
+<p>Thanks for your interest, <%= @user.email %></p>
 
 <h4>Here is a recap of your request:</h4>
 <ul>
     <li><%= @request.building.object_type.capitalize %></li>
     <li>Floors: <%= @request.building.floors.count %></li>
     <li>VdS Certification: <%= @request.building.vds_certification %></li>
-    <li>Security Hull</li>
+    <li>Security Hull: <%= @request.building.security_hull %></li>
+    <li>Emergency Response: <%= @request.building.emergency_response %></li>
   <% @request.building.floors.each do |floor| %>
     <li><%= floor.floor_type %></li>
     <li>Windows: <%= floor.windows %></li>
@@ -24,5 +25,7 @@
   <%= f.input :date, as: :string, input_html: { class: 'datepicker' } %>
   <%= f.button :submit %>
 <% end %>
+
+
 
 

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'requests#new'
 
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:edit, :update, :show]
 
   resources :requests, only: [:show, :new, :create, :edit, :update] do
     resources :buildings, only: [:new, :create]

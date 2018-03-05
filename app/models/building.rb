@@ -1,5 +1,5 @@
 class Building < ApplicationRecord
-  belongs_to :request
+  belongs_to :request, touch: true
   has_many :floors
   validates :object_type, presence: true
 

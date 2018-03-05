@@ -14,6 +14,7 @@ class Buildings::EmergencyResponseController < ApplicationController
     request.set_price_min
     request.set_price_max
     request.save
+    UserMailer.quotes(@building.request.user).deliver_now
     redirect_to request_path(@request)
   end
 end

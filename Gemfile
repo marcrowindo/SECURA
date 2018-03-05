@@ -20,6 +20,7 @@ gem 'bootstrap-slider-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener'
 end
 
 group :development, :test do

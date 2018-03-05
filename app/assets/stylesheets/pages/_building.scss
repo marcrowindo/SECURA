@@ -413,42 +413,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 
 
-/* Form logic only on floor page */
-.form-floor {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
-}
-
-.form-on-every-page-floor {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
-  padding: 30px 50px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-}
-/* all the form checkboxes (not labels) */
-.checkbox input[type="checkbox"] {
-  margin: 5px -32px;
-}
-
-
-
-
-
-/* Form logic on every page*/
-
-.form-on-every-page {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 1;
-  padding: 30px 50px;
-}
-
-
-
-
-
 
 
 /* Buttons back and next on every page */
@@ -462,13 +426,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   padding: 40px 30px;
 }
 
-// .form-buttons {
-//   grid-column: 2 / span 2;
-//   grid-row: 4 / span 1;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
 #button-back {
   color: #999999;
   border: 1px solid #999999;

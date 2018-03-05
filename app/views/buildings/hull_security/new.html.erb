@@ -42,28 +42,42 @@
 
 
       <!-- Form content  -->
-      <div class="form-on-every-page">
+      <div class="form-floor">
+        <div class="form-on-every-page">
 
-        <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
+          <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
 
-        <%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
-
-        <%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+          <%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
+          <%#= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+          <div class="styled-input-container">
+            <div class="styled-input-single">
+              <input type="radio" name="building[security_hull]" value="Yes" id="building_security_hull_yes" />
+              <label for="building_security_hull_yes">Yes</label>
+            </div>
+            <br>
+            <div class="styled-input-single">
+              <input type="radio" name="building[security_hull]" value="No" id="building_security_hull_no" />
+              <label for="building_security_hull_no">No</label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="form-buttons-on-every-page">
-       <a href="#" id="button-back">Back</a>
-       <%= f.button :submit, "Next", id: "button-next" %>
-       <% end %>
-     </div>
+        <a href="#" id="button-back">Back</a>
+        <%= f.button :submit, "Next", id: "button-next" %>
+        <% end %>
+      </div>
 
-   </div>
+
+
+    </div>
 
 <!--   <div class="copyright">
     <p>Copyright © 2018 by Secura AG, all rights reserved</p>
   </div> -->
 
-</div>
+  </div>
 </div>
 
 

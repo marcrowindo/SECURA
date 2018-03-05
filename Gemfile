@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap-slider-rails'
+gem 'icalendar'
 
 
 group :development do

@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap-slider-rails'
 gem 'icalendar'
+gem 'bootstrap-datepicker-rails'
 
 
 group :development do

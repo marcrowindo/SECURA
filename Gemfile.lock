@@ -44,6 +44,8 @@ GEM
     autoprefixer-rails (8.0.0)
       execjs
     bindex (0.5.0)
+    bootstrap-datepicker-rails (1.7.1.1)
+      railties (>= 3.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -184,6 +186,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bootstrap-datepicker-rails
   bootstrap-sass
   bootstrap-slider-rails
   figaro

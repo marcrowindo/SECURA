@@ -9,6 +9,7 @@ class UserMailer < ApplicationMailer
     @greeting = "Hi"
 
     @user = user
+    @request = @user.request
 
     mail(to: user.email, subject: 'Your offers have arrived!')
   end

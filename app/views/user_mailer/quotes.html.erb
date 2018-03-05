@@ -1,5 +1,14 @@
-<h1>User#quotes</h1>
+<h1><%= @user.email %></h1>
 
 <p>
-  <%= @greeting %>, find me in app/views/user_mailer/quotes.html.erb
+  <li><%= @greeting %>, find me in app/views/user_mailer/quotes.html.erb
+  <li><%= @request.quotes.last.supplier_name %>
+  <li><%= @request.quotes.last.supplier_address %>
+  <li><%= @request.quotes.last.phone_number %>
+  <li><%= @request.quotes.last.price %>
 </p>
+
+<% @request.quotes.each do |quote| %>
+  <%= quote.supplier_name %>
+  <%= link_to 'Book an appointment', quote_url(id: quote.id, token: quote.token) %>
+<% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'quotes/index'
+
   root to: 'requests#new'
 
   resources :users, only: [:edit, :update, :show]
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
   resources :requests, only: [:show, :new, :create, :edit, :update] do
     resources :buildings, only: [:new, :create]
   end
+
+    resources :quotes, only: [:show] do 
+      resources :bookings, only: [ :create ]
+    end
 
   resources :buildings, only: [:show] do
     resources :floors, only: [:new, :create, :index]

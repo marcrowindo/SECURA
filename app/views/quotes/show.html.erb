@@ -1,0 +1,17 @@
+<p>Thanks for your interest, <%= @user.email %></p>
+
+<h4>Here is a recap of your request:</h4>
+<ul>
+  <li>Floors: <%= @request.building.floors.count %></li>
+
+</ul>
+
+<h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your house for <%= @quote.price %>€</h3>
+
+<h6>Contact him: <%= @quote.phone_number %></h6>
+
+<%= simple_form_for [@quote, @booking] do |f| %>
+  <%= f.input :date, input_html: { class: 'datepicker' } %>
+  <%= f.button :submit %>
+<% end %>
+

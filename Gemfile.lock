@@ -65,6 +65,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    icalendar (2.4.1)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -187,6 +188,7 @@ DEPENDENCIES
   bootstrap-slider-rails
   figaro
   font-awesome-sass
+  icalendar
   jbuilder (~> 2.0)
   letter_opener
   listen (~> 3.0.5)

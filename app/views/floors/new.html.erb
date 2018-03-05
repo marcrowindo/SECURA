@@ -39,24 +39,59 @@
         <h2>Which floors of your house would you like to secure?</h2>
       </div>
 
+      <!--   Form elements - checkboxes -->
 
       <!-- Form content  -->
       <div class="form-floor">
         <div class="form-on-every-page-floor">
 
           <%= simple_form_for [@building, @floor] do |f| %>
-            <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
+          <%# f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
+          <div class="styled-input-container">
+            <div class="floors-flex">
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="Basement" id="floor_floor_type_basement" />
+                <label for="floor_floor_type_basement">Basement</label>
+              </div>
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="Ground floor" id="floor_floor_type_ground_floor" />
+                <label for="floor_floor_type_ground_floor">Ground floor</label>
+              </div>
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="1st floor" id="floor_floor_type_1st_floor" />
+                <label for="floor_floor_type_1st_floor">1st floor</label>
+              </div>
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="2nd floor" id="floor_floor_type_2nd_floor" />
+                <label for="floor_floor_type_2nd_floor">2nd floor</label>
+              </div>
+            </div>
+            <div class="floors-flex">
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="3rd floor" id="floor_floor_type_3rd_floor" />
+                <label for="floor_floor_type_3rd_floor">3rd floor</label>
+              </div>
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="4th floor" id="floor_floor_type_4th_floor" />
+                <label for="floor_floor_type_4th_floor">4th floor</label>
+              </div>
+              <div class="styled-input-single">
+                <input type="checkbox" name="floor[floor_type][]" value="Attic" id="floor_floor_type_attic" />
+                <label for="floor_floor_type_attic">Attic</label>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
       <div class="form-buttons-on-every-page">
-          <a href="#" id="button-back">Back</a>
-            <%= f.button :submit, "Next", id: "button-next" %>
-          <% end %>
+        <a href="#" id="button-back">Back</a>
+        <%= f.button :submit, "Next", id: "button-next" %>
+        <% end %>
       </div>
 
 
-  </div>
+    </div>
 
 <!--   <div class="copyright">
     <p>Copyright © 2018 by Secura AG, all rights reserved</p>
@@ -64,6 +99,15 @@
 
 </div>
 </div>
+
+
+
+
+
+
+
+
+
 
 
 

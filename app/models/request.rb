@@ -4,7 +4,6 @@ class Request < ApplicationRecord
   has_one :building
   validates :zip_code, presence: true
 
-
   # PRICE
   def set_price_min
     price = detectors_min + sensors_min

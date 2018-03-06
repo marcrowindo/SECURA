@@ -1,21 +1,11 @@
-<h1><%= @user.email %></h1>
 
 <p>
-  <li><%= @greeting %>,
-  <li><%= @request.quotes.last.supplier_name %>
-  <li><%= @request.quotes.last.supplier_address %>
-  <li><%= @request.quotes.last.phone_number %>
-  <li><%= @request.quotes.last.price %>
-</p>
-
-
-<p>
-  <li><%= @greeting %>, </li>
+  <h1><%= @greeting %>, <%= @user.email %></h1>
 <% @request.quotes.each do |quote| %>
+  <li><%= link_to 'Book an appointment with this supplier!', quote_url(id: quote.id, token: quote.token) %></li>
   <li><%= quote.supplier_name %>
   <li><%= quote.supplier_address %>
   <li><%= quote.phone_number %></li>
   <li><%= quote.price %></li>
-  <li><%= link_to 'Book an appointment with this supplier!', quote_url(id: quote.id, token: quote.token) %></li>
 <% end %>
 </p>

@@ -6,11 +6,11 @@ $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
+@font-face {
+  font-family: "datedropper";
+  src: font-url('datedropper/src/datedropper.eot');
+  src: font-url('datedropper/src/datedropper.eot?#iefix') format('embedded-opentype'),
+       font-url('datedropper/src/datedropper.woff') format('woff'),
+       font-url('datedropper/src/datedropper.ttf') format('truetype')
+}
 // $my-font: "Font Name";

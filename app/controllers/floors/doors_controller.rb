@@ -8,7 +8,7 @@ class Floors::DoorsController < ApplicationController
     @building = Building.find(params[:building_id])
     id_array = params[:floors].keys
     floor_array = Floor.where(building_id: params[:building_id])
-
+    
     id_array.each do |id|
       door_amount = params[:floors][id][:doors]
       floor = Floor.find(id)

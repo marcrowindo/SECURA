@@ -9,7 +9,7 @@
       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
       data-name="My Order"
       data-email="<%= @booking.quote.request.user.email %>"
-      data-description="Quote <%= @booking.quote.supplier_name %>"
+      data-description="<%= @booking.quote.supplier_name %>"
       data-amount="<%= @booking.amount_cents %>"
       data-currency="<%= @booking.amount.currency %>">
   </script>

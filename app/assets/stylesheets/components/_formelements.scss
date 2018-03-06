@@ -35,13 +35,16 @@
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: normal;
+  color: rgb(36, 37, 38)
 }
 
 .form-on-every-page input {
-  border-radius: 4px;
-  box-shadow: none;
+  border-radius: 5px;
+  border: none;
+  background: rgb(240, 240, 240);
+  height: 30px;
+  padding: 10px;
 }
-
 
 .small-form-heading {
   margin-top: 10px;

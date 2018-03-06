@@ -19,6 +19,9 @@ gem 'webpacker'
 gem 'bootstrap-slider-rails'
 gem 'icalendar'
 gem 'bootstrap-datepicker-rails'
+gem 'money-rails'
+gem 'stripe'
+
 
 
 group :development do

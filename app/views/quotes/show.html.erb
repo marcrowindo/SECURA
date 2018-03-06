@@ -17,7 +17,7 @@
   <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li>
 </ul>
 
-<h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= @quote.price %>€</h3>
+<h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= humanized_money_with_symbol(@quote.price) %></h3>
 
 <h6>Contact: <%= @quote.phone_number %></h6>
 
@@ -25,3 +25,4 @@
   <%= f.input :date, as: :string, input_html: { class: 'datedropper' } %>
   <%= f.button :submit %>
 <% end %>
+

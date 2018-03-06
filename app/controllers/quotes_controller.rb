@@ -1,4 +1,6 @@
 class QuotesController < ApplicationController
+  
+  
   def index
     @quotes = Quote.where(request_id: params[:request_id])
   end

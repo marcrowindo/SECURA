@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   end
 
     resources :quotes, only: [:show] do
-      resources :bookings, only: [ :create ]
+      resources :bookings, only: [ :create, :show ] do 
+        resources :payments, only: [:new, :create]
+      end
     end
 
   resources :buildings, only: [:show] do

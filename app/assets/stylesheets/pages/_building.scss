@@ -20,7 +20,7 @@ h6 {
 }
 
 p {
-  font-size: 10px;
+  font-size: 12px;
   font-color: lightgrey;
 }
 
@@ -119,7 +119,7 @@ p {
 .form-icons-buildings-page {
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
-  padding: 0px 50px;
+  padding: 30px 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -133,7 +133,7 @@ p {
   img {
     opacity: 0.6;
     transform: scale(0.9);
-    margin: 20px 5px;
+    margin: 5px 5px;
   }
   transition: all 200ms ease;
 }
@@ -170,11 +170,11 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .form-give-us-email {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
-  padding: 0px 50px;
+  padding: 60px 50px 0px 80px;
 }
 .form-give-us-email h6 {
   font-size: 13px;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 .form-group-label {
   display:none;
@@ -200,7 +200,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px 30px 30px;
+  padding: 0px 30px 35px 30px;
 }
 
 
@@ -442,7 +442,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   color: #999999;
 }
 #button-next {
-  margin: 30px 30px;
+  margin: 0px 50px;
   background-color: #FC5E25;
   border: 0px;
   padding: 10px 50px;

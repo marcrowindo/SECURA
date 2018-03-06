@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :buildings, only: [:new, :create]
   end
 
-    resources :quotes, only: [:show] do 
+    resources :quotes, only: [:show] do
       resources :bookings, only: [ :create ]
     end
 
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     patch 'hull_security', to: 'buildings/hull_security#create'
 
     get 'vds_certification', to: 'buildings/vds_certification#new'
-    post 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
+    patch 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
 
     get 'access_count', to: 'buildings/access_count#new'
     post 'access_count', to: 'buildings/access_count#create', as: :access_count_create

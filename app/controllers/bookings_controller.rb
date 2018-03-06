@@ -4,7 +4,8 @@ class BookingsController < ApplicationController
     date = Date.strptime(params["booking"]["date"], "%m/%d/%Y")
     quote = Quote.find(params[:quote_id])
     @booking = Booking.new(quote: quote, date: date)
-    @booking.amount = quote.price
+    @booking.percent_price = quote.price * 0.2
+    @booking.amount = @booking.percent_price
     @booking.save!
     redirect_to quote_booking_path(quote, @booking)
   end

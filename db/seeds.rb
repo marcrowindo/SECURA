@@ -28,16 +28,16 @@ quote_attributes = [
     request_id:            nil 
   },
   {
-    supplier_address:    'Protection One',
-    supplier_name:       'Holzhauser Str. 177, 13509 Berlin',
+    supplier_name:        'Protection One',
+    supplier_address:     'Holzhauser Str. 177, 13509 Berlin',
     phone_number:         '030 27004970',
     price:                 nil,
     token:                 nil,
     request_id:            nil 
   },
   {
-    supplier_address:    'SOSCOM',
-    supplier_name:       'Scharnweberstrasse 113, 13405 Berlin',
+    supplier_name:        'SOSCOM',
+    supplier_address:     'Scharnweberstrasse 113, 13405 Berlin',
     phone_number:         '030 410300',
     price:                 nil,
     token:                 nil,

@@ -43,12 +43,13 @@ h1, h2, h3 {
 .form-group-label {
   display: none;
 }
-.form-group input {
-  max-width: 400px;
-}
+// .form-group input {
+//   max-width: 400px;
+// }
 
+/* Homepage main btn */
 .banner input.btn{
-  margin: 10px 30px;
+  margin: 10px 0px;
   background-color: #FC5E25;
   border: 0px;
   padding: 10px 50px;
@@ -63,10 +64,11 @@ h1, h2, h3 {
   background-color: #f94b1b;
 }
 
-.form-inline {
-  display: flex;
-  align-items: left;
-}
+// .form-inline {
+//   display: flex;
+//   align-items: left;
+//   justify-content: space-around;
+// }
 
 .white-email-label {
   display: none;

@@ -60,23 +60,53 @@
         </label>
       </div>
 
+
       <!-- Insert email field -->
       <div class="form-give-us-email">
-        <h6>To continue, please provide your email below</h6>
 
-        <%= b.simple_fields_for :user do |u| %>
-        <%= u.input :email, placeholder: "Your email", label_html: { class: 'white-email-label' } %>
-        <% end %>
-        <p>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
+
+
+    <%= b.simple_fields_for :user do |u| %>
+    <form action="#" id="login-form">
+        <div class="form-group">
+          <label class="label-control">
+            <span class="label-text">Your Email</span>
+          </label>
+          <input type="text" name="building[user][email]" class="form-control" />
+          <% end %>
+        </div>
+
+        <p><b>Please provide your email to get five offers from our partners. </b><br>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
       </div>
 
       <!-- Buttons back and next -->
       <div class="form-buttons-buildings-page">
-        <a href="#" id="button-back">Back</a>
-        <%= b.button :submit, "Next", id: "button-next" %>
+       <%= b.button :submit, "Next", id: "button-next" %>
         <% end %>
       </div>
     </div>
+    </form>
+
+
+<!--     <form action="#" id="login-form">
+        <div class="form-group">
+          <label class="label-control">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="email" name="email" class="form-control" />
+        </div>
+
+        <input type="submit" value="Login" class="btn" />
+        <p class="text-p">Don't have an account? <a href="#">Sign up</a> </p>
+    </form> -->
+
+
+            <!-- originaal logic-->
+          <%#= b.simple_fields_for :user do |u| %>
+          <%#= u.input :email, placeholder: "Your email", label_html: { class: 'white-email-label' } %>
+
+
+
 
 <!--   <div class="copyright">
     <p>Copyright © 2018 by Secura AG, all rights reserved</p>
@@ -108,3 +138,19 @@
 </div>
 </div>
 </div>
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+  $('.form-group input').on('focus blur', function (e) {
+      $(this).parents('.form-group').toggleClass('active', (e.type === 'focus' || this.value.length > 0));
+  }).trigger('blur');
+});
+</script>
+

@@ -17,17 +17,14 @@ class PaymentsController < ApplicationController
       currency:     @booking.amount.currency
     )
 
+    quote = Quote.find(@booking.quote.id)
+
     @booking.update(payment: charge.to_json, paid: true)
-    raise
-    # redirect_to booking_path(@booking)
+    redirect_to quote_booking_path(quote, @booking)
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
     redirect_to new_booking_payment_path(@booking)
-  end
-
-  def show
-    
   end
 
 private

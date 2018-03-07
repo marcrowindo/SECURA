@@ -1,3 +1,55 @@
-.form-on-every-page li {
-  font-size: 14px;
+/*-- PAGE 11 - Dashboard */
+
+.container-content-offer {
+  display:grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 85% 15%;
 }
+
+/* left column */
+.container-price-recap {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+
+li {
+  font-size: 16px;
+}
+/* right column */
+.container-offer-pay {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  background: rgb(53, 130, 234);
+  color: white;
+  font-size: 20px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.container-offer-btn {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.container-offer-pay, .container-offer-btn {
+  background: rgb(53, 130, 234);
+  padding: 30px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+

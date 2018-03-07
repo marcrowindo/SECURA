@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.percent_price = quote.price * 0.2
     @booking.amount = @booking.percent_price
     @booking.save!
-    redirect_to quote_booking_path(quote, @booking)
+    redirect_to new_quote_booking_payment_path(quote, @booking)
   end
 
   def show

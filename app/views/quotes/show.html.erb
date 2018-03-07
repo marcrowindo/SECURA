@@ -1,5 +1,3 @@
-<!-- PAGE 12 - Dashboard -->
-
 <div class="wrapper">
   <div class="main-container">
 
@@ -27,63 +25,45 @@
       </div>
     </div>
 
-    <!-- Price estimate  -->
-    <div class="container-content">
-      <div class="container-form-content-hull">
-        <div class="container-price-estimate">
-          <h6></h6>
-          <h3></h3>
-        </div>
-      </div>
 
-      <div class="form-heading">
-        <h2>Price offer</h2>
-      </div>
+    <div class="container-content-offer">
+      <div class="container-price-recap">
+        <h2>Price Offer</h2>
+        <h4>Thanks you for trusting us, <b><%= @user.email %></b></h4>
 
-      <!-- Form content  -->
-      <div class="form-floor">
-        <div class="form-on-every-page">
-
-
-           <h6>Thanks for your interest, <b><%= @user.email %></b></h6>
-
-          <h6>Here is a recap of your request:</h6>
-          <ul>
-            <li><%= @request.building.object_type.capitalize %></li>
-            <li>Floors: <%= @request.building.floors.count %></li>
-            <li>VdS Certification: <%= @request.building.vds_certification %></li>
-            <li>Security Hull: <%= @request.building.security_hull %></li>
-            <li>Emergency Response: <%= @request.building.emergency_response %></li>
-            <% @request.building.floors.each do |floor| %>
-            <li><%= floor.floor_type %></li>
-            <li>Windows: <%= floor.windows %></li>
-            <li>Rooms: <%= floor.rooms %></li>
-            <li>Doors <%= floor.doors %></li>
-            <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
-            <% end %>
-            <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li>
-          </ul>
-
-          <h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= humanized_money_with_symbol(@quote.price) %></h3>
-
-          <h6>Contact: <%= @quote.phone_number %></h6>
-
-          <%= simple_form_for [@quote, @booking] do |f| %>
-          <%= f.input :date, as: :string, input_html: { class: 'datedropper' } %>
-          <%= f.button :submit %>
+        <h6>Here is a recap of your request:</h6>
+        <ul>
+          <li><%= @request.building.object_type.capitalize %></li>
+          <li>Floors: <%= @request.building.floors.count %></li>
+          <li>VdS Certification: <%= @request.building.vds_certification %></li>
+          <li>Security Hull: <%= @request.building.security_hull %></li>
+          <li>Emergency Response: <%= @request.building.emergency_response %></li>
+          <% @request.building.floors.each do |floor| %>
+          <li><%= floor.floor_type %></li>
+          <li>Windows: <%= floor.windows %></li>
+          <li>Rooms: <%= floor.rooms %></li>
+          <li>Doors <%= floor.doors %></li>
+          <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
           <% end %>
+          <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li>
+        </ul>
 
 
-
-        </div>
       </div>
+      <div class="container-offer-pay">
+        <h4>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= humanized_money_with_symbol(@quote.price) %></h4>
 
-            <div class="form-buttons-on-every-page">
+        <h6>Contact: <%= @quote.phone_number %></h6>
 
-            </div>
+        <%= simple_form_for [@quote, @booking] do |f| %>
+        <%= f.input :date, as: :string, input_html: { class: 'datedropper' } %>
 
+      </div>
+      <div class="container-offer-btn">
+        <%= f.button :submit %>
+        <% end %>
+      </div>
     </div>
 
   </div>
 </div>
-

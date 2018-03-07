@@ -29,7 +29,7 @@
     <div class="container-content-offer">
       <div class="container-price-recap">
         <h2>Price Offer</h2>
-        <h4>Thanks you for trusting us, <b><%= @user.email %></b></h4>
+        <h4><b>Thank you for trusting us, <br><%= @user.email %></b></h4>
 
         <h6>Here is a recap of your request:</h6>
         <ul>
@@ -51,17 +51,22 @@
 
       </div>
       <div class="container-offer-pay">
-        <h4>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= humanized_money_with_symbol(@quote.price) %></h4>
+        <h4>The supplier <%= @quote.supplier_name %> has offer to secure your <%= @request.building.object_type %> for <br></h4>
 
-        <h6>Contact: <%= @quote.phone_number %></h6>
+        <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
+
+        <h6>Contact: <br><%= @quote.supplier_name %><br>
+        Phone: <%= @quote.phone_number %><br>
+        Address: (<%= @quote.supplier_address %>)</h6>
 
         <%= simple_form_for [@quote, @booking] do |f| %>
-        <%= f.input :date, as: :string, input_html: { class: 'datedropper' } %>
-
-      </div>
-      <div class="container-offer-btn">
-        <%= f.button :submit %>
+        <b><%= f.input :date, as: :string, input_html: { class: 'datedropper' } %></b>
+        <%= f.button :submit, input_html: { class: 'btn', label: 'Buy now' } %>
         <% end %>
+
+<!--       </div>
+      <div class="container-offer-btn"> -->
+
       </div>
     </div>
 

@@ -1,4 +1,9 @@
 /*-- PAGE 1 - HOME */
+
+// * {
+//   border: 1px solid black;
+// }
+
 body {
   margin: 0;
   font-family: Open-sans, sans-serif;
@@ -47,6 +52,7 @@ h1, h2, h3 {
 // }
 
 /* Homepage main btn */
+
 .banner input.btn{
   margin: 10px 0px;
   background-color: #FC5E25;
@@ -78,11 +84,98 @@ h1, h2, h3 {
 }
 
 
+      // ADVANTAGES CARDS
+
+// * {
+//   border: 1px solid black;
+// }
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+    padding: 60px;
+    .advantage-card {
+      text-align: center;
+      width: 350px;
+      height: 250px;
+      background-color: white;
+      border-radius: 4px;
+      margin: 20px;
+      padding-top: 10px;
+      border : 1px solid #EEEEEE;
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+      }
+      .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        height: 65px;
+        padding: 0px 20px;
+      }
+      .paragraph-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+      }
+      h4 {
+        color: #3A9FEE;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 
 
 
-// Page 11
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// THANK YOU PAGE
 
 body {
   margin: 0;
@@ -94,7 +187,6 @@ h1, h2, h3 {
 .text-center {
   text-align: center;
 }
-
 .banner-thank-you-page {
   color: white;
   height: 100vh;
@@ -144,6 +236,16 @@ h1, h2, h3 {
 #button-orange:hover {
   background-color: #f94b1b;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -26,7 +26,6 @@ gem 'postmark-rails'
 
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
-gem 'jquery-rails'
 
 
 

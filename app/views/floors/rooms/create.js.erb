@@ -1,0 +1,20 @@
+// Sliding out the previous card              ROOM
+previousCard = document.querySelector('.container-content-rooms-page')
+previousCard.classList.add('slideOutLeft');
+setTimeout(function() {
+  previousCard.style.display = 'none'
+}, 500)
+
+// Sliding in the new card
+mainContainer = document.querySelector('.main-container')
+function renderFloorsPartial(partial) {
+  mainContainer.insertAdjacentHTML('beforeend', partial)
+}
+setTimeout(function() {
+  renderFloorsPartial('<%= j render "shared/vds_new", building: @building, request: @request %>')
+  newCard = document.querySelector('.container-content-vds-certification-page')
+  newCard.classList.add('slideInRight')
+}, 800)
+
+// Update the URL (change history)
+history.pushState(null, null, '/buildings/<%= @building.id %>/vds_certification')

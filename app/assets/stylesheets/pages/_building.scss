@@ -1,4 +1,4 @@
-/*-- PAGE 2 - FORM Buildings */
+/* PAGE 2 - FORM Buildings */
 
 body {
   margin: 0;
@@ -448,8 +448,13 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   text-decoration: none;
   color: #999999;
 }
+
+#button-next:hover {
+  background-color: #f94b1b;
+}
+
 #button-next {
-  margin: 0px 50px;
+  margin: 30px 30px;
   background-color: #FC5E25;
   border: 0px;
   padding: 10px 50px;
@@ -459,9 +464,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   transition: 0.5s ease;
   color: white;
   text-decoration: none;
-}
-#button-next:hover {
-  background-color: #f94b1b;
 }
 
 .copyright {

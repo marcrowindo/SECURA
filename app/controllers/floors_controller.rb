@@ -15,8 +15,12 @@ class FloorsController < ApplicationController
       @floor.building = @building
       @floor.save
     end
-    
-    redirect_to building_hull_security_path(@building)
+
+    respond_to do |format|
+      format.js
+    end
+
+    # redirect_to building_hull_security_path(@building)
   end
 
   private
@@ -33,6 +37,6 @@ class FloorsController < ApplicationController
   #     }
   #   }
   #   motion_dect[floor_name]
-      
+
   # end
 end

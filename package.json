@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
+    "animate.css": "^3.6.1",
     "bootstrap": "3",
     "bootstrap-slider": "^10.0.0",
     "jquery": "^3.3.1"

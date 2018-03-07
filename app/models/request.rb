@@ -1,16 +1,20 @@
 class Request < ApplicationRecord
   has_one :user
-  accepts_nested_attributes_for :user
   has_one :building
   has_many :quotes
-  validates :zip_code, presence: true
+
+  validates :zip_code, presence: true,
+                        format: { with: /(?!01000|99999)(0[1-9]\d{3}|[1-9]\d{4})/i, message: "Invalid zip code"}
+  validates_associated :user
+
+  accepts_nested_attributes_for :user
 
   # PRICE
   def set_price_min
     price = detectors_min + sensors_min
     price *= (building.vds_multiple.to_f / 100) unless (building.vds_multiple == 0) || (building.vds_multiple.nil?)
     price += person_access_min unless person_access_min.nil?
-    self.price_min = price.round    
+    self.price_min = price.round
   end
 
   def set_price_max
@@ -53,10 +57,10 @@ class Request < ApplicationRecord
     building.floors.each do |floor|
       sensors_price += floor.windows_and_doors_sensor * 200
     end
-    sensors_price    
+    sensors_price
   end
 
-  # PERSON ACCESS 
+  # PERSON ACCESS
   def person_access_min
     building.access_count * 50 if building.access_count
   end

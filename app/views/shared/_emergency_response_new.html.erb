@@ -1,0 +1,31 @@
+<!-- Price estimate  -->
+<div class="container-content container-form-content-emergency-response-page animated">
+  <div class="container-form-content-emergency">
+    <div class="container-price-estimate">
+      <h6>Your current price range estimate:</h6>
+      <h3><%= request.price_min %> - <%= request.price_max %> €</h3>
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>Are you interested in emergency response services?</h2>
+  </div>
+
+  <!-- Form content  -->
+  <div class="form-on-every-page">
+    <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
+
+    <%= simple_form_for building, url: building_emergency_response_create_path(building), method: :put do |f| %>
+
+    <%= f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
+  <div class="form-buttons-on-every-page">
+    <a href="#" id="button-back">Back</a>
+    <input name="commit" type="submit" value="Next" id="button-next" />
+    <% end %>
+  </div>
+  </div>
+
+</div>
+
+</div>

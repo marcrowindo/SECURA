@@ -1,0 +1,34 @@
+<div class="container-content-rooms-page animated" id="card-rooms-new">
+  <div class="container-content">
+    <div class="container-form-content-room">
+      <div class="container-price-estimate">
+        <h6>Your current price range estimate:</h6>
+        <h3><%= request.price_min %> - <%= request.price_max %> €</h3>
+      </div>
+    </div>
+
+    <div class="form-heading">
+      <h2>How many rooms do you have on this floor?</h2>
+    </div>
+
+    <!-- Form content  -->
+    <div class="form-on-every-page">
+
+      <%= form_tag building_rooms_create_path(building), remote: true do %>
+        <% floors.each do |floor| %>
+          <%= fields_for 'floors[]', floor do |p| %>
+            <div class="field">
+              <%= p.label floor.floor_type %><br>
+              <%= p.text_field :rooms %>
+            </div>
+          <% end %>
+        <% end %>
+        <div class="form-buttons-on-every-page">
+        <a href="#" id="button-back">Back</a>
+        <input name="commit" type="submit" value="Next" id="button-next" />
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

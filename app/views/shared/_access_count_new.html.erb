@@ -1,0 +1,34 @@
+<!-- Price estimate  -->
+<div class="container-content container-content-access-count-page animated" id="card-access-count-new">
+  <div class="container-form-content-people">
+    <div class="container-price-estimate">
+      <h6>Your current price range estimate:</h6>
+      <h3><%= request.price_min %> - <%= request.price_max %> €</h3>
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>How many people should have access to your <%= building.object_type %>?</h2>
+  </div>
+
+  <!-- Form content  -->
+  <div class="form-on-every-page-access-count">
+
+    <div class="container-text-center">
+      <%= simple_form_for building, url: building_access_count_path(building), method: :post, remote: true do |b| %>
+      <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>
+      <h5><span id="slider-value">1</span></h5>
+  <div class="form-buttons-on-every-page">
+    <a href="#" id="button-back">Back</a>
+    <input name="commit" type="submit" value="Next" id="button-next" />
+    <% end %>
+  </div>
+    </div>
+  </div>
+
+</div>
+
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "slide" %>
+<% end %>

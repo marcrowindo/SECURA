@@ -1,0 +1,52 @@
+<!-- Price estimate  -->
+<div class="container-content container-content-vds-certification-page animated">
+  <div class="container-form-content-certification">
+    <div class="container-price-estimate">
+      <h6>Your current price range estimate:</h6>
+      <h3> <%= request.price_min %> - <%= request.price_max %> €</h3>
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>Do you require VdS certification?</h2>
+  </div>
+
+  <div class="small-form-heading">
+    <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
+  </div>
+
+  <!-- Form content  -->
+  <div class="form-on-every-page">
+
+    <%= simple_form_for building, url: building_vds_create_path(building), method: :put, remote: true do |b| %>
+
+    <div class="styled-input-container">
+      <div class="styled-input-single">
+        <input type="radio" name="building[vds_certification]" value="No" id="_buildings_building_id_vds_certification_vds_certification_no" />
+        <label for="_buildings_building_id_vds_certification_vds_certification_no">No</label>
+      </div>
+
+      <div class="styled-input-single">
+        <input type="radio" name="building[vds_certification]" value="VdS A (Home)" id="_buildings_building_id_vds_certification_vds_certification_vds_a_home" />
+        <label for="_buildings_building_id_vds_certification_vds_certification_vds_a_home">VdS A (Home)</label>
+      </div>
+
+      <div class="styled-input-single">
+        <input type="radio" name="building[vds_certification]" value="VdS B" id="_buildings_building_id_vds_certification_vds_certification_vds_b" />
+        <label for="_buildings_building_id_vds_certification_vds_certification_vds_b">VdS B</label>
+      </div>
+
+      <div class="styled-input-single">
+        <input type="radio" name="building[vds_certification]" value="VdS C" id="_buildings_building_id_vds_certification_vds_certification_vds_c" />
+        <label for="_buildings_building_id_vds_certification_vds_certification_vds_c">VdS C</label>
+      </div>
+    </div>
+
+    <%#= b.input :vds_certification, collection: ["No", "VdS A (Home)", "VdS B", "VdS C"], as: :radio_buttons %>
+    <div class="form-buttons-on-every-page">
+      <a href="#" id="button-back">Back</a>
+      <input name="commit" type="submit" value="Next" id="button-next"/>
+      <% end %>
+    </div>
+  </div>
+</div>

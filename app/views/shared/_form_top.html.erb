@@ -1,0 +1,23 @@
+<!-- Logo, phone and FAQ bar -->
+<div class="container-logo-help">
+  <div class="container-logo">
+    <%= link_to root_path do %>
+    <%= image_tag "SECURA logo-blue.png" %>
+    <% end %>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="container-progress">
+    <div id="rootwizard">
+      <div id="bar" class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-help">
+    <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+    <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
+  </div>
+</div>

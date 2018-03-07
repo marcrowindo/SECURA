@@ -7,7 +7,9 @@ import Slider from 'bootstrap-slider'
 
 let MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 
-let slider = document.getElementById('ex1')
+let slider = document.getElementById('ex1');
+debugger
+
 let sliderValue = document.getElementById('slider-value')
 
 var observer = new MutationObserver(function(mutations) {
@@ -22,6 +24,8 @@ var observer = new MutationObserver(function(mutations) {
 observer.observe(slider, {
   attributes: true //configure it to listen to attribute changes
 });
+
+console.log("I GET LOADED");
 
 // sliderValue.addEventListener('change', function(e) {
 //   console.log(e)

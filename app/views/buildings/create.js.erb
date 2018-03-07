@@ -1,0 +1,20 @@
+// Sliding out the previous card
+var previousCard = document.querySelector('.container-content-buildings-page')
+previousCard.classList.add('slideOutLeft');
+setTimeout(function() {
+  previousCard.style.display = 'none'
+}, 500)
+
+// Sliding in the new card
+var mainContainer = document.querySelector('.main-container')
+function renderFloorsPartial(partial) {
+  mainContainer.insertAdjacentHTML('beforeend', partial)
+}
+setTimeout(function() {
+  renderFloorsPartial('<%= j render "shared/floor_new", building: @building, floor: @floor %>')
+  var newCard = document.querySelector('.container-content-floors-page')
+  newCard.classList.add('slideInRight')
+}, 800)
+
+// Update the URL (change history)
+history.pushState(null, null, '/requests/<%= @request.id %>/floors/new')

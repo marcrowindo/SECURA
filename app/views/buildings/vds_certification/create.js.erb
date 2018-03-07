@@ -1,0 +1,20 @@
+// Sliding out the previous card
+previousCard = document.querySelector('.container-content-vds-certification-page')
+previousCard.classList.add('slideOutLeft');
+setTimeout(function() {
+  previousCard.style.display = 'none'
+}, 500)
+
+// Sliding in the new card
+mainContainer = document.querySelector('.main-container')
+function renderFloorsPartial(partial) {
+  mainContainer.insertAdjacentHTML('beforeend', partial)
+}
+setTimeout(function() {
+  renderFloorsPartial('<%= j render "shared/access_count_new", building: @building, request: @request %>') // What is happening?
+  newCard = document.querySelector('.container-content-access-count-page')
+  newCard.classList.add('slideInRight')
+}, 800)
+
+// Update the URL (change history)
+history.pushState(null, null, '/buildings/<%= @building.id %>/access_count')

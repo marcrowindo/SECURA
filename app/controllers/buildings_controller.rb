@@ -6,14 +6,18 @@ class BuildingsController < ApplicationController
   end
 
   def create
+    @building = Building.new(building_params)
+    @building.request = Request.find(params[:request_id])
+    @building.save
+
     # do I have an existing user
     user = User.find_by_email(params[:building][:user][:email])
     # if yes
     if user
-      request = user.request
+      @request = user.request
       # does he have a building
       # if yes
-      if request.building.floors.count > 0
+      if @request.building.floors.count > 0
         Request.find(params[:request_id]).destroy
         redirect_to root_path
       else
@@ -22,17 +26,18 @@ class BuildingsController < ApplicationController
     # if no user
     else
       @user = User.new(user_params)
-      request = Request.find(params[:request_id])
-      @user.request = request
-      @user.save
+      @request = Request.find(params[:request_id])
+      @user.request = @request
+
+      if @user.save
+        @floor = Floor.new
+        respond_to do |format|
+          format.js
+        end
+      else
+        render :new, flash: { email_error: @user.errors.full_messages }
+      end
     end
-
-    # create building
-    @building = Building.new(building_params)
-    @building.request = Request.find(params[:request_id])
-    @building.save
-
-    redirect_to new_building_floor_path(@building)
   end
 
   private

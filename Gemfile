@@ -24,6 +24,11 @@ gem 'stripe'
 gem 'postmark-rails'
 
 
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+gem 'jquery-rails'
+
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

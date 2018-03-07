@@ -1,7 +1,7 @@
 class Building < ApplicationRecord
   belongs_to :request
   has_many :floors
-  validates :object_type, presence: true
+  validates :object_type, presence: { message: "Please select a building type." }
 
   before_save :set_vds_multiple
 

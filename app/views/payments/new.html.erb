@@ -1,0 +1,19 @@
+<%= form_tag quote_booking_payments_path(@booking.quote, @booking) do %>
+  <article>
+    <label class="amount">
+      <br><span>Booked Date: <%= time_tag @booking.date %></span></br>
+      <br><span>Quote Total: <%= humanized_money_with_symbol(@booking.quote.price) %></span></br>
+      <span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="My Order"
+      data-email="<%= @booking.quote.request.user.email %>"
+      data-description="<%= @booking.quote.supplier_name %>"
+      data-amount="<%= @booking.amount_cents %>"
+      data-currency="<%= @booking.amount.currency %>">
+  </script>
+ 
+<% end %>

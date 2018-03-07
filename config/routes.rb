@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
     resources :quotes, only: [:show] do
       resources :bookings, only: [ :create, :show ] do 
-        resources :payments, only: [:new, :create, :show]
+        resources :payments, only: [:new, :create]
       end
     end
 

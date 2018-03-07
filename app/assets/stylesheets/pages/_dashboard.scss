@@ -4,47 +4,99 @@
   display:grid;
   grid-template-columns: 65% 35%;
   grid-template-rows: 85% 15%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  height: 560px;
+  background-color: white;
 }
 
 /* left column */
 .container-price-recap {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
+  padding: 30px 70px;
 }
 
+.container-price-recap h2 {
+  margin-bottom: 30px;
+}
 li {
   font-size: 16px;
+  list-style-type: circle;
 }
+
+
+
 /* right column */
 .container-offer-pay {
   grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
-  background: rgb(53, 130, 234);
+  grid-row: 1 / span 2;
   color: white;
   font-size: 20px;
   border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-
-.container-offer-btn {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.container-offer-pay, .container-offer-btn {
-  background: rgb(53, 130, 234);
+  text-align: center;
+  background: rgb(7, 11, 49);
   padding: 30px;
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
+// .container-offer-btn {
+//   grid-column: 2 / span 1;
+//   grid-row: 2 / span 1;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   border-bottom-right-radius: 15px;
+//   border-bottom-left-radius: 15px;
+// }
 
+.container-offer-pay h4 {
+  font-size: 16px;
+  text-align: left;
+  text-indent: 5px;
+  line-height: 26px;
+}
 
+.container-offer-pay h6 {
+  font-size: 16px;
+  text-align: left;
+  text-indent: 5px;
+  font-weight: normal;
+  line-height: 26px;
+}
 
+#price {
+  font-size: 35px;
+  color: #56CCF2;
+}
+
+.form-group input {
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+  padding: 22px 12px;
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.btn {
+  margin: 10px 0px;
+  background-color: #FC5E25;
+  border: 0px;
+  padding: 10px 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  color: white;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #f94b1b;
+  color: white;
+}
 
 
 

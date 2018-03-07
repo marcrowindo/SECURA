@@ -1,0 +1,44 @@
+<tr>
+  <td align="center" height="100%" valign="top" width="100%" bgcolor="#f6f6f6" style="padding: 50px 15px;" class="mobile-padding">
+      <!--[if (gte mso 9)|(IE)]>
+      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+      <tr>
+      <td align="center" valign="top" width="600">
+      <![endif]-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+      <tr>
+        <td align="center" valign="top" style="padding: 0 0 25px 0; font-family: Open Sans, Helvetica, Arial, sans-serif;">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                      <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif;">
+                        <h2 style="font-size: 20px; color: #444444; margin: 0; padding-bottom: 10px;"><%= quote.supplier_name %></h2>
+                        <p style="color: #999999; font-size: 16px; line-height: 24px; margin: 0;">
+                            <%= quote.supplier_address %>
+                        </p>
+                        <p style="color: #999999; font-size: 16px; line-height: 24px; margin: 0;">
+                            <%= quote.phone_number %><br>
+                            <%= humanized_money_with_symbol(quote.price) %>
+                        </p>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 30px 0 0 0;">
+                      <!-- <table border="0" cellspacing="0" cellpadding="0"> -->
+                  </tr>
+                  <tr>
+                    <td align="center" style="border-radius: 26px;" bgcolor="#75b6c9">
+                        <%= link_to 'Book an appointment!', quote_url(id: quote.id, token: quote.token), style: "font-size: 16px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #75b6c9; padding: 14px 26px; border: 1px solid #75b6c9; display: block;" %>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

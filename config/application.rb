@@ -15,6 +15,7 @@ module SECURA
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    config.action_mailer.asset_host = 'https://secura.herokuapp.com'
 
     config.action_view.embed_authenticity_token_in_remote_forms = true
 

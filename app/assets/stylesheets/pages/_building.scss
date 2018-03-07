@@ -484,7 +484,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   text-decoration: none;
   color: #999999;
 }
-#button-next {
+.button-next {
   margin: 30px 30px;
   background-color: #FC5E25;
   border: 0px;
@@ -496,7 +496,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   color: white;
   text-decoration: none;
 }
-#button-next:hover {
+.button-next:hover {
   background-color: #f94b1b;
 }
 

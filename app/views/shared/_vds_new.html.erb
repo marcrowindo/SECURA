@@ -1,0 +1,25 @@
+<!-- Price estimate  -->
+<div class="container-content container-content-vds-certification-page animated">
+  <div class="container-form-content-certification">
+    <div class="container-price-estimate">
+      <h6>Your current price range estimate:</h6>
+      <h3> <%= request.price_min %> - <%= request.price_max %> €</h3>
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>Do you require VdS certification?</h2>
+  </div>
+
+<!-- Form content  -->
+  <div class="form-on-every-page">
+
+    <%= simple_form_for building, url: building_vds_create_path(building), method: :put, remote: true do |b| %>
+      <%= b.input :vds_certification, collection: ["No", "VdS A (Home)", "VdS B", "VdS C"], as: :radio_buttons %>
+            <div class="form-buttons-on-every-page">
+        <a href="#" id="button-back">Back</a>
+          <input name="commit" type="submit" value="Next" class="button-next"/>
+        <% end %>
+      </div>
+  </div>
+</div>

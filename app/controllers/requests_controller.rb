@@ -5,8 +5,11 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(request_params)
-    @request.save!
-    redirect_to new_request_building_path(@request)
+    if @request.save
+      redirect_to new_request_building_path(@request)
+    else
+      render :new
+    end
   end
 
   def show
@@ -20,7 +23,7 @@ class RequestsController < ApplicationController
   def update
   end
 
-  private 
+  private
 
   def request_params
     params.require(:request).permit(:zip_code)

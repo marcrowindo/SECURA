@@ -21,13 +21,13 @@ Rails.application.routes.draw do
     patch 'hull_security', to: 'buildings/hull_security#create'
 
     get 'vds_certification', to: 'buildings/vds_certification#new'
-    post 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
+    put 'vds_certification', to: 'buildings/vds_certification#create', as: :vds_create
 
     get 'access_count', to: 'buildings/access_count#new'
     post 'access_count', to: 'buildings/access_count#create', as: :access_count_create
 
     get 'emergency_response', to: 'buildings/emergency_response#new'
-    post 'emergency_response', to: 'buildings/emergency_response#create', as: :emergency_response_create
+    put 'emergency_response', to: 'buildings/emergency_response#create', as: :emergency_response_create
   end
 
   resources :floors, only: [:update]

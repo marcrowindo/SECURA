@@ -27,36 +27,6 @@
       </div>
     </div>
 
-    <!-- Price estimate  -->
-    <div class="container-content">
-      <div class="container-form-content-hull">
-        <div class="container-price-estimate">
-        </div>
-      </div>
-
-      <div class="form-heading">
-        <h2>Would you like to be at home whilst the system is active?</h2>
-      </div>
-
-
-      <!-- Form content  -->
-      <div class="form-on-every-page">
-
-        <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
-
-        <%= simple_form_for @building, url: building_hull_security_path(@building), method: :patch do |f| %>
-
-        <%= f.input :security_hull, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
-      </div>
-
-      <div class="form-buttons-on-every-page">
-       <a href="#" id="button-back">Back</a>
-       <%= f.button :submit, "Next", id: "button-next" %>
-       <% end %>
-     </div>
-
-   </div>
-
 <!--   <div class="copyright">
     <p>Copyright © 2018 by Secura AG, all rights reserved</p>
   </div> -->

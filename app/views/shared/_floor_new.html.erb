@@ -1,0 +1,27 @@
+<!-- PAGE 3 - FORM Floors -->
+
+<!-- Price estimate  -->
+<div class="container-content container-content-floors-page animated" id="card-floor-new">
+  <div class="container-form-content-floor">
+    <div class="container-price-estimate">
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>Which floors of your house would you like to secure?</h2>
+  </div>
+
+  <!-- Form content  -->
+  <div class="form-floor">
+    <div class="form-on-every-page-floor">
+      <%= simple_form_for [building, floor], remote: true do |f| %>
+        <%= f.input :floor_type, collection: ["Basement", "Ground floor", "1st floor", "2nd floor", "3rd floor", "4th floor", "Attic"], as: :check_boxes %>
+      <div class="form-buttons-on-every-page">
+        <a href="#" id="button-back">Back</a>
+          <%= f.button :submit, "Next", class: "button-next", id: 'submit-floor-new' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'secura@info.de'
+  default from: 'team@mysecura.co'
   
   layout 'mailer'
 end

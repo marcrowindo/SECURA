@@ -1,0 +1,12 @@
+
+  <h1><%= @greeting %>, <%= @user.email %></h1>
+<% @request.quotes.each do |quote| %>
+  <li><%= quote.supplier_name %>
+  <li><%= quote.supplier_address %>
+  <li><%= quote.phone_number %></li>
+  <li><%= humanized_money_with_symbol(quote.price) %></li>
+  <li><%= link_to 'Book an appointment with this supplier!', quote_url(id: quote.id, token: quote.token) %></li>
+  <br></br>
+<% end %>
+
+

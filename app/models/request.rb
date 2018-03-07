@@ -1,11 +1,13 @@
 class Request < ApplicationRecord
   has_one :user
-  accepts_nested_attributes_for :user
   has_one :building
+  has_many :quotes
+
   validates :zip_code, presence: true,
                         format: { with: /(?!01000|99999)(0[1-9]\d{3}|[1-9]\d{4})/i, message: "Invalid zip code"}
   validates_associated :user
 
+  accepts_nested_attributes_for :user
 
   # PRICE
   def set_price_min

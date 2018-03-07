@@ -1,0 +1,337 @@
+
+/* Form logic only on floor page */
+
+.form-floor {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.form-on-every-page-floor {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  padding: 30px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+/* all the form checkboxes (not labels) */
+.checkbox input[type="checkbox"] {
+  margin: 5px -32px;
+}
+
+
+/* Form logic on every page*/
+
+.form-on-every-page {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  padding: 10px 50px;
+}
+
+.form-on-every-page label {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: rgb(36, 37, 38)
+}
+
+.form-on-every-page input {
+  border-radius: 5px;
+  border: none;
+  background: rgb(240, 240, 240);
+  // height: 30px;
+  padding: 10px;
+}
+
+.small-form-heading {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/* Form style in slider page */
+.form-on-every-page-access-count {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* New styles */
+
+
+
+.new_floor {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.styled-input-container-floor {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.styled-input-container-floor label {
+  font-weight: normal;
+  font-size: 17px;
+  padding: 12px 0 3px 5px;
+
+}
+
+.styled-input-single label:before {
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin: -4px 0 0;
+  background: #f7f7f7;
+  box-shadow: 0 0 1px grey
+}
+
+.styled-input-single {
+  position: relative;
+  padding: 12px 0px 3px 50px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 17px;
+  label {
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+
+    }
+    &:before {
+      left: 0;
+      width: 30px;
+      height: 30px;
+      margin: -7px 0 0;
+      background: #f7f7f7;
+      box-shadow: 0 0 1px grey;
+    }
+    &:after {
+      left: 5px;
+      width: 20px;
+      height: 20px;
+      margin: -2px 0 0;
+      opacity: 0;
+      background: #3A9FEE;
+      transform: translate3d(-40px, 0, 0) scale(0.5);
+      transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+    }
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    visibility: hidden;
+
+    &:checked + label {
+      &:before {
+      }
+      &:after {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.styled-input--rounded {
+  label {
+    &:before {
+      border-radius: 10px;
+    }
+    &:after {
+      border-radius: 6px;
+    }
+  }
+
+
+
+}
+
+
+
+// extra fancy one-line form
+
+.form-control {
+  box-shadow: none;
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+body {
+  background:#f4f4f4 ;
+  font-family: 'open sans', sans-serif;
+}
+.form-box{
+  background: #fff;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16), 0 3px 6px 0px rgba(0,0,0,0.23);
+}
+form#login-form {
+  overflow: hidden;
+  position: relative;
+  padding: 40px;
+}
+.head {
+  color: #fff;
+  font-size: 34px;
+  font-weight: normal;
+  padding: 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: #6498fe;
+}
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-group .label-control {
+  color: #888;
+  display: block;
+  font-size: 16px;
+  color: #3A9FEE;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 50%;
+  pointer-events: none;
+  height: 100%;
+}
+.form-group .label-control::before,
+.form-group .label-control::after{
+  content: "";
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.form-group .label-control::before{
+  border-bottom: 3px solid #3A9FEE;
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+.form-group .label-control::after {
+  border-bottom: 2px solid #03A9F4;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 14px;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-group .label-control .label-text{
+   -webkit-transform: translate3d(0, 30px, 0) scale(1);
+    -moz-transform: translate3d(0, 30px, 0) scale(1);
+    transform: translate3d(0, 30px, 0) scale(1);
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
+}
+.active .label-control::after{
+   -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+.active .label-control .label-text {
+    opacity: 1;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    color: #03A9F4 !important;
+}
+
+.input-field label:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #B9C1CA;
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+
+// input.btn[type="submit"] {
+//   background: #6498fe;
+//   border:none;
+//   border-radius: 2px;
+//   color: #fff;
+//   cursor: pointer;
+//   font-size: 16px;
+//   font-weight: bold;
+//   letter-spacing: 3px;
+//   margin: 5px 0;
+//   outline: medium none;
+//   overflow: hidden;
+//   padding: 10px;
+//   text-transform: uppercase;
+//   transition: all 0.15s ease-in-out 0s;
+//   width: 100%;
+//   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.16), 0 1px 2px 0px rgba(0,0,0,0.23);
+// }
+// input.btn[type="submit"]:hover {
+//   background: #4b81eb;
+//   box-shadow: 0 2px 4px 0px rgba(0,0,0,0.16), 0 2px 4px 0px rgba(0,0,0,0.23);
+// }
+.text-p{
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+}
+.text-p a{
+  color: #175690;
+}
+@media (max-width: 480px){
+  form#login-form {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
+
+
+
+

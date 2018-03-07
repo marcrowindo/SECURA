@@ -13,7 +13,13 @@ class Buildings::EmergencyResponseController < ApplicationController
     request = @building.request
     request.set_price_min
     request.set_price_max
+    Quote.all.each do |quote|
+      quote.request = @request
+      quote.price = @request.price_min + rand(0..500)
+      quote.save
+    end
     request.save
+    UserMailer.quotes(@building.request.user).deliver_now
     redirect_to request_path(@request)
   end
 end

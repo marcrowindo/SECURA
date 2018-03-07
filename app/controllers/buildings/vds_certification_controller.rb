@@ -7,7 +7,6 @@ class Buildings::VdsCertificationController < ApplicationController
 
   def create
     @building = Building.find(params[:building_id])
-    id = params[:building_id]
     @building.update(vds_certification: params["building"]["vds_certification"])
     @building.save
     @request = @building.request
@@ -18,7 +17,11 @@ class Buildings::VdsCertificationController < ApplicationController
     respond_to do |format|
       format.js
     end
-    # redirect_to building_access_count_path
   end
 
+  private
+
+  def building_params
+    params.require(:building).permit(:vds_certification)
+  end
 end

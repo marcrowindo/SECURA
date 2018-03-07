@@ -1,0 +1,89 @@
+<!-- PAGE 12 - Dashboard -->
+
+<div class="wrapper">
+  <div class="main-container">
+
+    <!-- Logo, phone and FAQ bar -->
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="container-progress">
+        <div id="rootwizard">
+          <div id="bar" class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
+      </div>
+    </div>
+
+    <!-- Price estimate  -->
+    <div class="container-content">
+      <div class="container-form-content-hull">
+        <div class="container-price-estimate">
+          <h6></h6>
+          <h3></h3>
+        </div>
+      </div>
+
+      <div class="form-heading">
+        <h2>Price offer</h2>
+      </div>
+
+      <!-- Form content  -->
+      <div class="form-floor">
+        <div class="form-on-every-page">
+
+
+           <h6>Thanks for your interest, <b><%= @user.email %></b></h6>
+
+          <h6>Here is a recap of your request:</h6>
+          <ul>
+            <li><%= @request.building.object_type.capitalize %></li>
+            <li>Floors: <%= @request.building.floors.count %></li>
+            <li>VdS Certification: <%= @request.building.vds_certification %></li>
+            <li>Security Hull: <%= @request.building.security_hull %></li>
+            <li>Emergency Response: <%= @request.building.emergency_response %></li>
+            <% @request.building.floors.each do |floor| %>
+            <li><%= floor.floor_type %></li>
+            <li>Windows: <%= floor.windows %></li>
+            <li>Rooms: <%= floor.rooms %></li>
+            <li>Doors <%= floor.doors %></li>
+            <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
+            <% end %>
+            <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li>
+          </ul>
+
+          <h3>The supplier <%= @quote.supplier_name %> (<%= @quote.supplier_address %>) has offer to secure your <%= @request.building.object_type %> for <%= humanized_money_with_symbol(@quote.price) %></h3>
+
+          <h6>Contact: <%= @quote.phone_number %></h6>
+
+          <%= simple_form_for [@quote, @booking] do |f| %>
+          <%= f.input :date, as: :string, input_html: { class: 'datedropper' } %>
+          <%= f.button :submit %>
+          <% end %>
+
+
+
+        </div>
+      </div>
+
+            <div class="form-buttons-on-every-page">
+
+            </div>
+
+    </div>
+
+  </div>
+</div>
+

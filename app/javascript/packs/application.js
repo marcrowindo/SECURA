@@ -9,4 +9,3 @@
 
 import "./animations.js"
 import "bootstrap";
-import "./slide.js"

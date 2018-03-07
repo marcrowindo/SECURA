@@ -34,12 +34,10 @@ class BuildingsController < ApplicationController
         respond_to do |format|
           format.js
         end
-        # redirect_to new_building_floor_path(@building)
       else
         render :new, flash: { email_error: @user.errors.full_messages }
       end
     end
-
   end
 
   private

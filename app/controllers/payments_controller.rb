@@ -26,6 +26,10 @@ class PaymentsController < ApplicationController
     redirect_to new_booking_payment_path(@booking)
   end
 
+  def show
+    
+  end
+
 private
 
   def set_booking

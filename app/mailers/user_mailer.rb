@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.quotes.subject
   #
   def quotes(user)
-    @greeting = "Hi"
+    @greeting = "Thank you for using Secura!"
 
     @user = user
     @request = @user.request

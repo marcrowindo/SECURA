@@ -121,7 +121,7 @@ p {
   grid-row: 2 / span 1;
   padding: 30px 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .form-icons-buildings-page p {
   text-align: center;
@@ -170,7 +170,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .form-give-us-email {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
-  padding: 60px 50px 0px 80px;
+  padding: 55px 50px 33px 80px;
 }
 .form-give-us-email h6 {
   font-size: 13px;
@@ -195,7 +195,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 }
 .form-give-us-email p {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: grey;
 }
 
@@ -429,18 +429,18 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 30px;
+  margin-top: 15px;
 }
 
 #button-back {
   color: #999999;
   border: 2px solid #999999;
-  padding: 10px 40px;
+  padding: 10px 50px;
   border-radius: 50px;
   font-weight: normal;
   opacity: 0.6;
   transition: background 0.5s ease;
-  margin: 0px 50px;
+  margin: 30px 30px;
   text-decoration: none;
 }
 #button-back:hover {

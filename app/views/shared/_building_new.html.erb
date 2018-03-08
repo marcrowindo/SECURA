@@ -1,4 +1,7 @@
-<!-- Price estimate  -->
+<!-- PAGE 2 - Buildings */
+
+
+<!- Price estimate  -->
 <div class="container-content-buildings-page animated" id="card-building-new">
   <div class="container-form-content-building">
     <div class="container-price-estimate">
@@ -33,7 +36,6 @@
 
   <!-- Insert email field -->
   <div class="form-give-us-email">
-    <h6>To continue, please provide your email below</h6>
 
     <%= b.simple_fields_for :user do |u| %>
       <div class="form-group">
@@ -45,7 +47,7 @@
     <% end %>
 
 
-    <p><b>Please provide your email to get five offers from our partners. </b>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
+    <p><b>Please provide your email to get five offers from our partners. </b><br>Your data will not be used by any third parties without your explicit consent. <br>Refer to our privacy policy <a data-toggle="modal" data-target="#exampleModalCenter">here</a>.</p>
   </div>
 
   <!-- Buttons back and next -->
@@ -53,6 +55,7 @@
     <a href="#" id="button-back">Back</a>
     <%= b.button :submit, "Next", id: 'button-next' %>
     <% end %>
+
   </div>
 </div>
 

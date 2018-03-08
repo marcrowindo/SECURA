@@ -1,19 +1,65 @@
-<%= form_tag quote_booking_payments_path(@booking.quote, @booking) do %>
-  <article>
-    <label class="amount">
-      <br><span>Booked Date: <%= time_tag @booking.date %></span></br>
-      <br><span>Quote Total: <%= humanized_money_with_symbol(@booking.quote.price) %></span></br>
-      <span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span>
-    </label>
-  </article>
+<div class="wrapper">
+  <div class="main-container">
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-name="My Order"
-      data-email="<%= @booking.quote.request.user.email %>"
-      data-description="<%= @booking.quote.supplier_name %>"
-      data-amount="<%= @booking.amount_cents %>"
-      data-currency="<%= @booking.amount.currency %>">
-  </script>
- 
-<% end %>
+    <!-- Logo, phone and FAQ bar -->
+    <div class="container-logo-help">
+      <div class="container-logo">
+        <%= link_to root_path do %>
+        <%= image_tag "SECURA logo-blue.png" %>
+        <% end %>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="container-progress">
+        <div id="rootwizard">
+          <div id="bar" class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-help">
+        <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+        <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
+      </div>
+    </div>
+
+
+    <div class="container-content-offer">
+      <div class="container-price-recap">
+
+        <%= form_tag quote_booking_payments_path(@booking.quote, @booking) do %>
+          <article>
+            <label class="amount">
+
+        <span>Booked Date: <%= time_tag @booking.date %></span></br>
+
+        <span>Quote Total: <%= humanized_money_with_symbol(@booking.quote.price) %></span></br>
+              <span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span>
+            </label>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="My Order"
+              data-email="<%= @booking.quote.request.user.email %>"
+              data-description="<%= @booking.quote.supplier_name %>"
+              data-amount="<%= @booking.amount_cents %>"
+              data-currency="<%= @booking.amount.currency %>">
+          </script>
+
+        <% end %>
+
+
+      </div>
+      <div class="container-offer-pay">
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

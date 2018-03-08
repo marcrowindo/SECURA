@@ -1,0 +1,98 @@
+<!-- PAGE 2 - FORM Buildings (and rest of the funnel) -->
+<div class="wrapper">
+  <div class="main-container">
+
+<!-- Logo, phone and FAQ bar -->
+<div class="container-logo-help">
+  <div class="container-logo">
+    <%= link_to root_path do %>
+    <%= image_tag "SECURA logo-blue.png" %>
+    <% end %>
+  </div>
+
+  <!-- Progress bar -->
+<!--   <div class="container-progress">
+    <div id="rootwizard">
+      <div id="bar" class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="progressbar-container">
+    <div class="progress"></div>
+  </div>
+
+  <div class="container-help">
+    <p><i class="fas fa-phone"></i>     0176 700 166 02</p>
+    <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
+  </div>
+</div>
+
+
+
+<!-- Price estimate  -->
+<div class="container-content container-content-access-count-page animated" id="card-access-count-new">
+  <div class="container-form-content-people">
+    <div class="container-price-estimate">
+      <h6>Your current price range estimate:</h6>
+      <h3><%= @request.price_min %> - <%= @request.price_max %> €</h3>
+    </div>
+  </div>
+
+  <div class="form-heading">
+    <h2>How many people should have access to your <%= @building.object_type %>?</h2>
+  </div>
+
+  <!-- Form content  -->
+  <div class="form-on-every-page-access-count">
+
+    <div class="container-text-center form-access-count">
+      <%= simple_form_for @building, url: building_access_count_path(@building), method: :post, remote: true do |b| %>
+      <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "0" } %>
+      <h4><b><span id="slider-value">1</span></b> persons</h4>
+    <div class="form-buttons-on-every-page">
+    <a href="#" id="button-back">Back</a>
+    <input name="commit" type="submit" value="Next" id="button-next" />
+    <% end %>
+  </div>
+    </div>
+  </div>
+
+</div>
+
+<%= content_for :after_js do %>
+  <script>
+    var slider = $("#building_access_count")
+    slider.slider()
+    var inputValue = $('#slider-value')
+    slider.bind('change', function(e) {
+      console.log(slider.attr('data-value'))
+      inputValue.text(slider.attr('data-value'))
+    }) 
+  </script>
+<% end %>
+
+
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle"><strong>FAQ</strong></h5>
+
+      </div>
+      <div class="modal-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias cupiditate autem corrupti sequi, dolor a dignissimos dolores repellat, placeat atque nam voluptatibus quod in doloribus pariatur ratione tempora velit, illum.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

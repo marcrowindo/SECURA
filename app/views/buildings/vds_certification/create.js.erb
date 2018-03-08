@@ -12,9 +12,20 @@ function renderFloorsPartial(partial) {
 }
 setTimeout(function() {
   renderFloorsPartial('<%= j render "shared/access_count_new", building: @building, request: @request %>') // What is happening?
-  newCard = document.querySelector('.container-content-access-count-page')
-  newCard.classList.add('slideInRight')
-}, 800)
+  newCard = document.querySelector('.container-content-access-count-page');
+  newCard.classList.add('slideInRight');
+  // Ugly slider
+  // $("#building_access_count").slider();
+
+    var slider = $("#building_access_count")
+    slider.slider()
+    var inputValue = $('#slider-value')
+    slider.bind('change', function(e) {
+      console.log(slider.attr('data-value'))
+      inputValue.text(slider.attr('data-value'))
+    }) 
+
+}, 1000)
 
 // Update the URL (change history)
 history.pushState(null, null, '/buildings/<%= @building.id %>/access_count')

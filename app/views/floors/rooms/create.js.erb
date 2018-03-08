@@ -14,7 +14,7 @@ setTimeout(function() {
   renderFloorsPartial('<%= j render "shared/vds_new", building: @building, request: @request %>')
   newCard = document.querySelector('.container-content-vds-certification-page')
   newCard.classList.add('slideInRight')
-}, 800)
+}, 1000)
 
 // Update the URL (change history)
 history.pushState(null, null, '/buildings/<%= @building.id %>/vds_certification')

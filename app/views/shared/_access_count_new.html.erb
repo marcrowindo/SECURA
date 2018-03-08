@@ -14,11 +14,13 @@
   <!-- Form content  -->
   <div class="form-on-every-page-access-count">
 
-    <div class="container-text-center">
+    <div class="container-text-center form-access-count">
       <%= simple_form_for building, url: building_access_count_path(building), method: :post, remote: true do |b| %>
-      <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "1", "slider-id" => "ex1Slider" }, id: "ex1" %>
-      <h5><span id="slider-value">1</span></h5>
-  <div class="form-buttons-on-access-count-page">
+
+      <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "0" } %>
+      <h5><b><span id="slider-value">1</span></b> persons</h5>
+    <div class="form-buttons-on-access-count-page">
+      
     <a href="#" id="button-back">Back</a>
     <input name="commit" type="submit" value="Next" id="button-next" />
     <% end %>
@@ -28,7 +30,11 @@
 
 </div>
 
-
-<% content_for :after_js do %>
-  <%= javascript_pack_tag "slide" %>
+<%= content_for :after_js do %>
+  <script>
+    var slider = document.getElementById('building_access_count')
+    slider.addEventListener('change', function() {
+      console.log('test')
+    })
+  </script>
 <% end %>

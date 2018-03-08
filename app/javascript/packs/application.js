@@ -8,4 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "./animations.js"
+import "./slick.js"
 import "bootstrap";
+
+

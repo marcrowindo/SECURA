@@ -65,6 +65,9 @@ h1, h2, h3 {
   color: white;
   text-decoration: none;
 }
+.banner input.btn:focus {
+  outline: 0;
+}
 .banner-input:hover {
   background-color: #f94b1b;
 }

@@ -87,83 +87,83 @@ h1, h2, h3 {
 
       // STEPS
 
-      .steps-container {
-        position: absolute;
-        top: 73vh;
-        display: flex;
-        justify-content: space-between;
-        width: 80vw;
-        .step {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          p {
-            font-weight: bolder;
-            margin-top: 10px;
-            font-size: 18px;
-          }
-          .number {
-            height: 35px;
-            width: 35px;
-            position: relative;
-            top: 20px;
-            right: 35px;
-          }
-          .icon {
-            height: 95px;
-            width: 95px;
-          }
-        }
-      }
+.steps-container {
+  position: absolute;
+  top: 73vh;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  .step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-weight: bolder;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .icon {
+      height: 95px;
+      width: 95px;
+    }
+  }
+}
+
       // ADVANTAGES CARDS
 
-      .advantages {
-        display: flex;
-        justify-content: center;
-        .wrapper {
-          display: flex;
-          justify-content: center;
-          padding: 0;
-          flex-wrap: wrap;
-          padding: 60px;
-          .advantage-card {
-            text-align: center;
-            width: 350px;
-            height: 250px;
-            background-color: white;
-            border-radius: 4px;
-            margin: 20px;
-            padding-top: 10px;
-            border : 2px solid #EEEEEE;
-            .image-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 90px;
-            }
-            .header-container {
-              display: flex;
-              justify-content: center;
-              align-items: top;
-              height: 65px;
-              padding: 0px 20px;
-            }
-            .paragraph-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 0px 20px;
-            }
-            h4 {
-              color: #3A9FEE;
-            }
-            p {
-              font-size: 16px;
-            }
-          }
+.advantages {
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+    padding: 60px;
+    .advantage-card {
+      text-align: center;
+      width: 350px;
+      height: 250px;
+      background-color: white;
+      border-radius: 4px;
+      margin: 20px;
+      padding-top: 10px;
+      border: 2px solid #EEEEEE;
+      &:hover {
+        .image-container {
+          transform: scale(1.1)
         }
       }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        transition: transform 0.2s ease;
+      }
+      .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        height: 65px;
+        padding: 0px 20px;
+      }
+      .paragraph-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+      }
+      h4 {
+        color: #3A9FEE;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 
 // TESTIMONIALS
 
@@ -177,67 +177,67 @@ h1, h2, h3 {
   h3 {
     color: white;
   }
-
-
 }
 
 .sliding-card {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center;
-    border-radius: 4px;
-    position: relative;
-    margin: 20px 0;
-    .avatar {
-      border-radius: 50%;
-      height: 140px;
-      width: 140px;
-      z-index: 5;
-      position: absolute;
-      left: 31vw;
-      border: 3px solid white;
-      box-shadow: 2px 2px 5px #aaaaaa;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+  margin: 20px 0;
+  .avatar {
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    z-index: 5;
+    position: absolute;
+    left: 31vw;
+    border: 3px solid white;
+    box-shadow: 2px 2px 5px #aaaaaa;
+  }
+  .house-image {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 222px;
+    width: 325px;
+  }
+  .info-box {
+    height: 222px;
+    width: 700px;
+    background-color: white;
+    padding: 40px 100px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    p {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: left;
     }
-    .house-image {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      height: 222px;
-      width: 325px;
-    }
-    .info-box {
-      height: 222px;
-      width: 700px;
-      background-color: white;
-      padding: 40px 100px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      p {
-        margin-top: 20px;
-        font-size: 16px;
-        text-align: left;
-      }
-      .info-box-top {
-        display: flex;
-        .explanation {
-          .star-rating {
-            height: 20px;
-          }
+    .info-box-top {
+      display: flex;
+      .explanation {
+        .star-rating {
+          height: 20px;
+          margin-top: 10px;
         }
-        .personal-info {
-          padding-right: 40px;
-          .name {
-            margin-top: 0;
-            font-size: 16px;
-            font-weight: bolder;
-          }
-          .city {
-            font-size: 16px;
-            margin-top: 0;
-          }
+      }
+      .personal-info {
+        padding-right: 40px;
+        .name {
+          margin-top: 0;
+          font-size: 16px;
+          font-weight: bolder;
+        }
+        .city {
+          font-size: 16px;
+          margin-top: 0;
         }
       }
     }
   }
+}
+
 
 
 

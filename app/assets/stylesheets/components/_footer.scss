@@ -34,9 +34,6 @@
   }
 }
 
-
-
-
 .wrapper-bottom {
   background-color: #323131;
   color: #626262;
@@ -45,4 +42,11 @@
   height: 80px;
   align-items: center;
   padding: 0px 149px;
+  a {
+    color: #626262;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }

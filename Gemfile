@@ -21,7 +21,7 @@ gem 'icalendar'
 gem 'bootstrap-datepicker-rails'
 gem 'money-rails'
 gem 'stripe'
-gem 'postmark-rails'
+
 
 
 gem 'client_side_validations'

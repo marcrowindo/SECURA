@@ -15,12 +15,12 @@
   <div class="form-on-every-page-access-count">
 
     <div class="container-text-center form-access-count">
-      <%= simple_form_for building, url: building_access_count_path(building), method: :post, remote: true do |b| %>
+      <%= simple_form_for building, url: building_access_count_path(building), method: :post, class: 'form-centered', remote: true do |b| %>
 
       <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "0" } %>
       <h5><b><span id="slider-value">1</span></b> persons</h5>
     <div class="form-buttons-on-every-page">
-      
+
     <a href="#" id="button-back">Back</a>
     <input name="commit" type="submit" value="Next" id="button-next" />
     <% end %>

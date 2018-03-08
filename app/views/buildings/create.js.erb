@@ -18,3 +18,7 @@ setTimeout(function() {
 
 // Update the URL (change history)
 history.pushState(null, null, '/requests/<%= @request.id %>/floors/new')
+
+// Update progress bar to 20%
+let progressBar = document.querySelector('.progress')
+progressBar.style.width = '20%'

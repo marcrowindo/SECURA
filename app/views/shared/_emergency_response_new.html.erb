@@ -17,7 +17,19 @@
 
     <%= simple_form_for building, url: building_emergency_response_create_path(building), method: :put do |f| %>
 
-    <%= f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+    <%# f.input :emergency_response, collection: ["Yes", "No"], as: :radio_buttons, :checked => ["Yes", true] %>
+
+      <div class="styled-input-container">
+        <div class="styled-input-single">
+          <input type="radio" name="building[emergency_response]" value="Yes" id="building_emergency_response_yes" />
+          <label for="building_emergency_response_yes">Yes</label>
+        </div>
+        <br>
+        <div class="styled-input-single">
+          <input type="radio" name="building[emergency_response]" value="No" id="building_emergency_response_no" />
+          <label for="building_emergency_response_no">No</label>
+        </div>
+      </div>
 
   <div class="form-buttons-on-every-page">
     <a href="#" id="button-back">Back</a>

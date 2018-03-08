@@ -1,3 +1,6 @@
+<!-- PAGE 13 - Payment confirmation -->
+
+
 <div class="wrapper">
   <div class="main-container">
 
@@ -5,7 +8,7 @@
     <div class="container-logo-help">
       <div class="container-logo">
         <%= link_to root_path do %>
-        <%= image_tag "SECURA logo-blue.png" %>
+        <%= image_tag "secura-logo-blue.png" %>
         <% end %>
       </div>
 
@@ -26,8 +29,12 @@
     </div>
 
 
+
+
     <div class="container-content-offer">
       <div class="container-price-recap">
+      </div>
+      <div class="container-offer-pay">
 
         <%= form_tag quote_booking_payments_path(@booking.quote, @booking) do %>
           <article>
@@ -50,12 +57,6 @@
           </script>
 
         <% end %>
-
-
-      </div>
-      <div class="container-offer-pay">
-
-
 
 
       </div>

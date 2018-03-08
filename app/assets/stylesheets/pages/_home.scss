@@ -65,6 +65,9 @@ h1, h2, h3 {
   color: white;
   text-decoration: none;
 }
+.banner input.btn:focus {
+  outline: 0;
+}
 .banner-input:hover {
   background-color: #f94b1b;
 }
@@ -102,6 +105,11 @@ h1, h2, h3 {
       font-weight: bolder;
       margin-top: 10px;
       font-size: 18px;
+    }
+
+    .number {
+      height: 35px;
+      width: 35px;
     }
     .icon {
       height: 95px;
@@ -339,6 +347,14 @@ h1, h2, h3 {
 
 
 
+.step-desc {
+  display: flex;
+  align-items: center;
+
+  p {
+    padding-left: 15px;
+  }
+}
 
 
 

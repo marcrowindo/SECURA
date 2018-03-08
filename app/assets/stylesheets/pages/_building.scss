@@ -11,7 +11,7 @@ h1, h2, h3 {
 h2 {
   font-size: 30px;
   text-align: center;
-  color: #2F80ED;
+  color: #3A9FEE;
 }
 
 h6 {
@@ -441,9 +441,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 36px;
   position: absolute;
-  left: 90px;
 }
 
 .form-buttons-on-access-count-page {
@@ -456,6 +455,18 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   margin-left: 90px;
   position: absolute;
   top: -25px;
+}
+
+#form-buttons-on-access-count-page {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  position: absolute;
+  top: 237px;
+  left: 50px;
 }
 
 #button-back {
@@ -492,6 +503,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   text-decoration: none;
 }
 
+.access-fix-btn {
+  bottom: 20px;
+  left: 50px !important;
+}
+
+.access-fix-btn2 {
+  bottom: 20px;
+  left: 50px !important;
+}
 .copyright {
   text-align: center;
   margin-top: 5px;

@@ -1,9 +1,9 @@
 /*-- PAGE 11 - Dashboard */
 
 .container-content-offer {
-  display:grid;
-  grid-template-columns: 65% 35%;
-  grid-template-rows: 85% 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
   border-radius: 15px;
   height: 560px;
@@ -15,51 +15,43 @@
 .container-price-recap {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
-  padding: 30px 70px;
+  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('3floor.jpg');
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 900px auto;
+  background-position: 83% 78%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  min-height: 0;
+  min-width: 0;
 }
 
-.container-price-recap h2 {
-  margin-bottom: 50px;
-}
+// .container-price-recap h2 {
+//   margin-bottom: 50px;
+// }
 
-.container-price-recap h4 {
-  margin-bottom: 30px;
-  font-size: 16px;
-}
+// .container-price-recap h4 {
+//   margin-bottom: 30px;
+//   font-size: 16px;
+// }
 
-li {
-  font-size: 16px;
-  list-style-type: circle;
-}
+// li {
+//   font-size: 16px;
+//   list-style-type: circle;
+// }
 
-ul {
-  margin-left: 20px;
-}
+// ul {
+//   margin-left: 20px;
+// }
 
 
 /* right column */
 .container-offer-pay {
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
   grid-row: 1 / span 2;
-  color: white;
-  font-size: 20px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  text-align: center;
-  background: rgb(7, 11, 49);
-  padding: 30px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
-
-// .container-offer-btn {
-//   grid-column: 2 / span 1;
-//   grid-row: 2 / span 1;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   border-bottom-right-radius: 15px;
-//   border-bottom-left-radius: 15px;
-// }
 
 .container-offer-pay h4 {
   font-size: 18px;

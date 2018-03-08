@@ -207,6 +207,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px 35px 30px;
+  margin-left: 20px;
 }
 
 
@@ -430,6 +431,32 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  position: absolute;
+  top: 285px;
+  left: 90px;
+}
+
+.form-buttons-on-floors-page {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  position: absolute;
+  left: 90px;
+}
+
+.form-buttons-on-access-count-page {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 90px;
+  position: absolute;
+  top: -25px;
 }
 
 #button-back {

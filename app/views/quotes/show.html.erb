@@ -28,10 +28,10 @@
 
     <div class="container-content-offer">
       <div class="container-price-recap">
-        <h2>Price Offer</h2>
-        <h4><b>Thank you for trusting us, <br><%= @user.email %></b></h4>
+        <h2><%= @quote.supplier_name %></h2>
+        <h6><b>Thank you for trusting us, <%= @user.email %></b><br>
+        Here is a summary of your request:</h6>
 
-        <h6>Here is a recap of your request:</h6>
         <ul>
           <li><%= @request.building.object_type.capitalize %></li>
           <li>Floors: <%= @request.building.floors.count %></li>
@@ -45,25 +45,33 @@
           <li>Doors <%= floor.doors %></li>
           <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
           <% end %>
-          <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li>
+<!--           <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li> -->
         </ul>
 
 
       </div>
       <div class="container-offer-pay">
-        <h4>The supplier <%= @quote.supplier_name %> has offer to secure your <%= @request.building.object_type %> for <br></h4>
+        <!-- <h6><b>Thank you for trusting us, <%= @user.email %></b>,<%= @quote.supplier_name %> has an offer to secure your <%= @request.building.object_type %> for </h4><br> -->
+
+        <!-- <h4>Based on your request our trusted partner <%= @quote.supplier_name %> has an offer to secure your <%= @request.building.object_type %> for </h4><br> -->
 
         <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
+      <h6><span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span></h6>
 
-        <h6>Contact: <br><%= @quote.supplier_name %><br>
-        Phone: <%= @quote.phone_number %><br>
-        Address: (<%= @quote.supplier_address %>)</h6>
 
         <%= simple_form_for [@quote, @booking] do |f| %>
         <b><%= f.input :date, as: :string, input_html: { class: 'datedropper' } %></b>
-        <%= f.button :submit, input_html: { class: 'btn', label: 'Buy now' } %>
+        <%= f.submit "Confirm", input_html: { class: 'btn' } %>
         <% end %>
 
+
+
+
+
+
+<!--         <h6><br>Contact them at: <br><%= @quote.supplier_name %></h6>
+ -->        <!-- <h6>Address: <br><%= @quote.supplier_address %><br>
+        Phone: <br><%= @quote.phone_number %></h6> -->
 <!--       </div>
       <div class="container-offer-btn"> -->
 

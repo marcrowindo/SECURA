@@ -27,6 +27,8 @@
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
   padding: 10px 50px;
+  position: relative;
+
 }
 
 .form-on-every-page label {
@@ -56,8 +58,8 @@
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
   margin-top: 60px;
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  // justify-content: space-around;
 }
 
 /* New styles */

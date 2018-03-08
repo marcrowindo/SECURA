@@ -1,0 +1,22 @@
+.wrapper-links {
+  display: flex;
+  justify-content: space-around;
+  background-color: #424242;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  .column {
+    color: #FFFFFF;
+  }
+}
+
+.wrapper-bottom {
+  background-color: #323131;
+  color: #626262;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding: 0px 149px;
+}

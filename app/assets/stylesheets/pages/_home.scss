@@ -104,9 +104,6 @@ h1, h2, h3 {
     .number {
       height: 35px;
       width: 35px;
-      position: relative;
-      top: 20px;
-      right: 35px;
     }
     .icon {
       height: 95px;
@@ -265,6 +262,14 @@ h1, h2, h3 {
 
 
 
+.step-desc {
+  display: flex;
+  align-items: center;
+
+  p {
+    padding-left: 15px;
+  }
+}
 
 
 

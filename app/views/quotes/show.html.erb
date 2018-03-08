@@ -24,27 +24,48 @@
         <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
       </div>
     </div>
+    
+    <% def vds_logic
+      if @request.building.vds_certification == "No"
+        "You requested that you <b>did not</b> want to VdS certify your building.".html_safe
+      else
+        "You requested a <b>#{@request.building.vds_certification}</b> certificatoin on your building.".html_safe
+      end
+    end %>
 
+    <% def e_r_logic
+      if @request.building.emergency_response == "No"
+        "You stated that you were <b>not</b> interested in emergency response system installed to your building.".html_safe
+      else
+        "You stated that you <b>did</b> want to install a emergency repsonse system to your building".html_safe
+      end
+    end %>
+
+    <% def s_h_logic
+      if @request.building.security_hull == "No"
+        "You also stated that you were <b>not</b> interested in having your alarm system active whilst in your home.".html_safe
+      else
+        "You also stated that you <b>were</b> interested in having your alarm system actice whilst in your home.".html_safe
+      end
+    end %>
+    
 
     <div class="container-content-offer">
       <div class="container-price-recap">
         <h2><%= @quote.supplier_name %></h2>
         <h6><b>Thank you for trusting us, <%= @user.email %></b><br>
-        Here is a summary of your request:</h6>
-
-        <ul>
-          <li><%= @request.building.object_type.capitalize %></li>
-          <li>Floors: <%= @request.building.floors.count %></li>
-          <li>VdS Certification: <%= @request.building.vds_certification %></li>
-          <li>Security Hull: <%= @request.building.security_hull %></li>
-          <li>Emergency Response: <%= @request.building.emergency_response %></li>
+          <br>
+        You have requested the following security provisions on your <b><%= @request.building.object_type %></b>. <%= vds_logic %> <%= e_r_logic %> <%= s_h_logic %>
+        <%= e_r_logic %> Your current request has <b><%= @request.building.floors.count %></b> floor(s). <br>
           <% @request.building.floors.each do |floor| %>
-          <li><%= floor.floor_type %></li>
-          <li>Windows: <%= floor.windows %></li>
-          <li>Rooms: <%= floor.rooms %></li>
-          <li>Doors <%= floor.doors %></li>
-          <li>Sensors: <%= floor.windows_and_doors_sensor %></li>
+              <b><li><%= floor.floor_type %>,</li></b>
+              <li> with <b><%= floor.windows %></b> windows, </li>
+              <li><b><%= floor.rooms %></b> rooms, </li>
+              <li><b><%= floor.doors %></b> doors, </li>
+              <li>and <b><%= floor.windows_and_doors_sensor %></b> sensors for each of those windows and doors.</li>
           <% end %>
+
+
 <!--           <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li> -->
         </ul>
 
@@ -56,7 +77,6 @@
         <!-- <h4>Based on your request our trusted partner <%= @quote.supplier_name %> has an offer to secure your <%= @request.building.object_type %> for </h4><br> -->
 
         <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
-      <h6><span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span></h6>
 
 
         <%= simple_form_for [@quote, @booking] do |f| %>

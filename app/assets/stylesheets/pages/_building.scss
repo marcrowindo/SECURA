@@ -449,13 +449,14 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 .form-buttons-on-access-count-page {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  margin-left: 90px;
-  top: -25px;
-}
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // margin-top: 15px;
+  // margin-left: 90px;
+  // position: absolute;
+  // top: -25px;
+
 
 #button-back {
   color: #999999;

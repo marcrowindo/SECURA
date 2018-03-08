@@ -18,37 +18,37 @@
 
   <!-- STEPS -->
 
-<div class="steps-container">
-
-  <div class="step">
-    <%= image_tag "Step1.png", class: "icon" %>
-    <div class="step-desc">
-      <%= image_tag "Number1.png", class: "number" %>
-      <p>Fill in our form</p>
+  <div class="steps-container">
+    <div class="step">
+      <%= image_tag "Step1.png", class: "icon" %>
+      <div class="step-desc">
+        <%= image_tag "Number1.png", class: "number" %>
+        <p>Fill in our form</p>
+      </div>
     </div>
-  </div>
 
-  <div class="step">
-    <%= image_tag "Step2.png", class: "icon" %>
-    <div class="step-desc">
-      <%= image_tag "Number2.png", class: "number" %>
-      <p>Receive 5 offers</p>
+    <div class="step">
+      <%= image_tag "Step2.png", class: "icon" %>
+      <div class="step-desc">
+        <%= image_tag "Number2.png", class: "number" %>
+        <p>Receive 5 offers</p>
+      </div>
     </div>
-  </div>
 
-  <div class="step">
-    <%= image_tag "Step3.png", class: "icon" %>
-    <div class="step-desc">
-      <%= image_tag "Number3.png", class: "number" %>
-      <p>Choose a provider</p>
+    <div class="step">
+      <%= image_tag "Step3.png", class: "icon" %>
+      <div class="step-desc">
+        <%= image_tag "Number3.png", class: "number" %>
+        <p>Choose a provider</p>
+      </div>
     </div>
-  </div>
 
-  <div class="step">
-    <%= image_tag "Step4.png", class: "icon" %>
-    <div class="step-desc">
-      <%= image_tag "Number4.png", class: "number" %>
-      <p>Installation</p>
+    <div class="step">
+      <%= image_tag "Step4.png", class: "icon" %>
+      <div class="step-desc">
+        <%= image_tag "Number4.png", class: "number" %>
+        <p>Installation</p>
+      </div>
     </div>
   </div>
 </div>
@@ -130,9 +130,7 @@
   <h3>Over 2.300 happy customers in Germany!</h3>
 
   <!-- CAROUSEL -->
-
   <div class="carousel">
-
     <div class="sliding-card">
       <%= image_tag "house1.jpg", class: "house-image" %>
       <%= image_tag "profile4.jpg", class: "avatar" %>
@@ -204,50 +202,44 @@
         <p>"Da, SECURA cud prrovide special services to handle... ...special requirements let's say. And peeple keep saying that Obama listened in Trump's office..."</p>
       </div>
     </div>
-
   </div>
 </div>
   <!-- FOOTER -->
-  <footer>
-    <div class="wrapper-links">
+<footer>
+  <div class="wrapper-links">
+    <ul class="column">
+      <li class="title">SECURA</li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Why SECURA</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Jobs</a></li>
+    </ul>
 
-      <ul class="column">
-        <li class="title">SECURA</li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Why SECURA</a></li>
-        <li><a href="#">How it works</a></li>
-        <li><a href="#">Jobs</a></li>
-      </ul>
+    <ul class="column">
+      <li class="title">Alarm Systems</li>
+      <li><a href="#">Purchase Advisor</a></li>
+      <li><a href="#">Alarm Systems with Kids?</a></li>
+      <li><a href="#">Alarm goes off...What now?</a></li>
+    </ul>
 
-      <ul class="column">
-        <li class="title">Alarm Systems</li>
-        <li><a href="#">Purchase Advisor</a></li>
-        <li><a href="#">Alarm Systems with Kids?</a></li>
-        <li><a href="#">Alarm goes off...What now?</a></li>
-      </ul>
+    <ul class="column">
+      <li class="title">Customer Service</li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Terms & conditions</a></li>
+      <li><a href="#">Data protection</a></li>
+    </ul>
 
-      <ul class="column">
-        <li class="title">Customer Service</li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Terms & conditions</a></li>
-        <li><a href="#">Data protection</a></li>
-      </ul>
-
-      <ul class="column">
-        <li class="title">Payment Methods</li>
-        <li><%= image_tag "vorkasse.png", style: "height: 35px" %></li>
-        <li><%= image_tag "master_card.png", style: "height: 35px" %></li>
-        <li><%= image_tag "visa.png", style: "height: 35px" %></li>
-        <li>Invoice</li>
-      </ul>
-
-    </div>
-
-    <div class="wrapper-bottom">
-      <p>Copyright (c) 2018 Secura AG, all rights reserved</p>
-      <p><a href="#">Login</a> in as a partner</p>
-    </div>
-
-
-  </footer>
+    <ul class="column">
+      <li class="title">Payment Methods</li>
+      <li><%= image_tag "vorkasse.png", style: "height: 35px" %></li>
+      <li><%= image_tag "master_card.png", style: "height: 35px" %></li>
+      <li><%= image_tag "visa.png", style: "height: 35px" %></li>
+      <li>Invoice</li>
+    </ul>
+  </div>
+  <div class="wrapper-bottom">
+    <p>Copyright (c) 2018 Secura AG, all rights reserved</p>
+    <p><a href="#">Login</a> in as a partner</p>
+  </div>
+</footer>

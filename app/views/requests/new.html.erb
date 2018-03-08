@@ -1,11 +1,10 @@
 <%= flash[:not_allowed] %>
 
-<!-- PAGE 1 - HOME -->
-
+<!-- MAIN BANNER (ends after steps)-->
 <div class="banner">
   <div class="banner-content">
     <h1>Home security made easy</h1>
-    <h2>Get five offers from our trusted partners in five easy steps
+    <h2>Get five offers from our trusted partners in four easy steps
     </h2>
 
     <!-- Insert ZIP code field -->
@@ -21,7 +20,7 @@
 
 <div class="steps-container">
 
-  <div class="step">    
+  <div class="step">
     <%= image_tag "Step1.png", class: "icon" %>
     <div class="step-desc">
       <%= image_tag "Number1.png", class: "number" %>
@@ -41,7 +40,7 @@
     <%= image_tag "Step3.png", class: "icon" %>
     <div class="step-desc">
       <%= image_tag "Number3.png", class: "number" %>
-      <p>Choose a provider</p>      
+      <p>Choose a provider</p>
     </div>
   </div>
 
@@ -54,15 +53,9 @@
   </div>
 </div>
 
-</div>
-
-
-
 <!-- ADVANTAGES CARDS -->
-
 <div class="advantages">
   <div class="wrapper">
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "piggy_bank.png", style: "height: 50px" %>
@@ -74,19 +67,17 @@
         <p>Fixed price offers prevent hidden costs. Every company is tested, insured & adheres to high standards.</p>
       </div>
     </div>
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "Star_Rating.png", style: "height: 30px" %>
       </div>
       <div class="header-container">
-        <h4>Transparent & compareable</h4>
+        <h4>Transparent & comparable</h4>
       </div>
       <div class="paragraph-container">
         <p>Customer ratings & easily compareable offers make it easy to select the right company.</p>
       </div>
     </div>
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "Head_phones.png", style: "height: 55px" %>
@@ -98,7 +89,6 @@
         <p>Free consultation with SECURA security experts.</p>
       </div>
     </div>
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "burglar.png", style: "height: 60px" %>
@@ -110,7 +100,6 @@
         <p>At SECURA we consult you remotely without knowing the address of your unprotected home. No home visits.</p>
       </div>
     </div>
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "KFW_Logo.png", style: "height: 40px" %>
@@ -122,7 +111,6 @@
         <p>Private home owners can apply for subsidies of up to 20%.</p>
       </div>
     </div>
-
     <div class="advantage-card">
       <div class="image-container">
         <%= image_tag "shield.png", style: "height: 55px" %>
@@ -134,43 +122,132 @@
         <p>We offer you a unique insurance that insures your belongings at their original price.</p>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- FOOTER GOES HERE -->
+<!-- TESTIMONIALS -->
+<div class="wrapper-testimonials">
+  <h3>Over 2.300 happy customers in Germany!</h3>
 
-<div class="wrapper-links">
-  <div class="column">
-    <h5>SECURA</h5>
-    <p>About Us</p>
-    <p>Why SECURA</p>
-    <p>How it works</p>
-    <p>Jobs</p>
-  </div>
-  <div class="column">
-    <h5>Alarm Systems</h5>
-    <p>Purchase Advisor</p>
-    <p>Alarm Systems with Kids?</p>
-    <p>Alarm goes off...What now?</p>
-  </div>
-  <div class="column">
-    <h5>Customer Service</h5>
-    <p>FAQ</p>
-    <p>Contact</p>
-    <p>Terms & Condition</p>
-    <p>Data Protection</p>
-  </div>
-  <div class="column">
-    <h5>Payment Methods</h5>
-    <p><%= image_tag "vorkasse.png", style: "height: 35px" %></p>
-    <p><%= image_tag "master_card.png", style: "height: 35px" %></p>
-    <p><%= image_tag "visa.png", style: "height: 35px" %></p>
-    <p>Invoice</p>
+  <!-- CAROUSEL -->
+
+  <div class="carousel">
+
+    <div class="sliding-card">
+      <%= image_tag "house1.jpg", class: "house-image" %>
+      <%= image_tag "profile4.jpg", class: "avatar" %>
+      <div class="info-box">
+        <div class="info-box-top">
+          <div class="personal-info">
+            <p class="name">Hermann</p>
+            <p class="city">Berlin</p>
+          </div>
+          <div class="explanation">
+            <span><em>We helped Hermann's family feel safe at night.</em></span>
+            <%= image_tag "Star_Rating.png", class: "star-rating" %>
+          </div>
+        </div>
+        <p>"Living outside of Berlin I never felt 100% safe, but thanks to SECURA that changed to the better!"</p>
+      </div>
+    </div>
+
+    <div class="sliding-card">
+      <%= image_tag "house2.jpg", class: "house-image" %>
+      <%= image_tag "profile2.jpg", class: "avatar" %>
+      <div class="info-box">
+        <div class="info-box-top">
+          <div class="personal-info">
+            <p class="name">Jenny</p>
+            <p class="city">Leipzig</p>
+          </div>
+          <div class="explanation">
+            <span><em>Jenny simply wanted more transparency.</em></span>
+            <%= image_tag "Star_Rating.png", class: "star-rating" %>
+          </div>
+        </div>
+        <p>"I found it super hard to digg through all the specialists that are out there. Thankfully, SECURA provided the transparency I needed."</p>
+      </div>
+    </div>
+
+    <div class="sliding-card">
+      <%= image_tag "house3.jpg", class: "house-image" %>
+      <%= image_tag "profile3.jpg", class: "avatar" %>
+      <div class="info-box">
+        <div class="info-box-top">
+          <div class="personal-info">
+            <p class="name">Thomas</p>
+            <p class="city">Bremen</p>
+          </div>
+          <div class="explanation">
+            <span><em>Thomas was able to find the right specialist.</em></span>
+            <%= image_tag "Star_Rating.png", class: "star-rating" %>
+          </div>
+        </div>
+        <p>"I had absolutely no overview over the different specialities all those "specialists" have. SECURA's services really made this a lot more transparent.</p>
+      </div>
+    </div>
+
+    <div class="sliding-card">
+      <%= image_tag "house4.jpg", class: "house-image" %>
+      <%= image_tag "profile1.jpg", class: "avatar" %>
+      <div class="info-box">
+        <div class="info-box-top">
+          <div class="personal-info">
+            <p class="name">Vlad</p>
+            <p class="city">Trump Tower</p>
+          </div>
+          <div class="explanation">
+            <span><em>Even the KGB trusts us.</em></span>
+            <%= image_tag "Star_Rating.png", class: "star-rating" %>
+          </div>
+        </div>
+        <p>"Da, SECURA cud prrovide special services to handle... ...special requirements let's say. And peeple keep saying that Obama listened in Trump's office..."</p>
+      </div>
+    </div>
+
   </div>
 </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrapper-links">
 
-<div class="wrapper-bottom">
-    <p>Copyright (c) 2018 Secura AG, all rights reserved</p>
-    <p>Login in as a partner</p>
-</div>
+      <ul class="column">
+        <li class="title">SECURA</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Why SECURA</a></li>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Alarm Systems</li>
+        <li><a href="#">Purchase Advisor</a></li>
+        <li><a href="#">Alarm Systems with Kids?</a></li>
+        <li><a href="#">Alarm goes off...What now?</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Customer Service</li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Data protection</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Payment Methods</li>
+        <li><%= image_tag "vorkasse.png", style: "height: 35px" %></li>
+        <li><%= image_tag "master_card.png", style: "height: 35px" %></li>
+        <li><%= image_tag "visa.png", style: "height: 35px" %></li>
+        <li>Invoice</li>
+      </ul>
+
+    </div>
+
+    <div class="wrapper-bottom">
+      <p>Copyright (c) 2018 Secura AG, all rights reserved</p>
+      <p><a href="#">Login</a> in as a partner</p>
+    </div>
+
+
+  </footer>

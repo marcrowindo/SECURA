@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def create
     booking = params["booking"]
     date = Date.strptime(params["booking"]["date"], "%m/%d/%Y")

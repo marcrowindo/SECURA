@@ -11,12 +11,14 @@
     <h2>Do you require VdS certification?</h2>
   </div>
 
-  <div class="small-form-heading">
-    <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
-  </div>
+
 
   <!-- Form content  -->
   <div class="form-on-every-page">
+
+  <div class="small-form-heading">
+    <h6>Click <a data-toggle="modal" data-target="#exampleModalCenter">here</a> for a brief explanation.</h6>
+  </div>
 
     <%= simple_form_for building, url: building_vds_create_path(building), method: :put, remote: true do |b| %>
 

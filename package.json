@@ -6,7 +6,8 @@
     "animate.css": "^3.6.1",
     "bootstrap": "3",
     "bootstrap-slider": "^10.0.0",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.0.0"

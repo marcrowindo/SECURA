@@ -60,7 +60,7 @@
         <%= image_tag "Star_Rating.png", style: "height: 30px" %>
       </div>
       <div class="header-container">
-        <h4>Transparent & compareable</h4>
+        <h4>Transparent & comparable</h4>
       </div>
       <div class="paragraph-container">
         <p>Customer ratings & easily compareable offers make it easy to select the right company.</p>
@@ -198,38 +198,43 @@
   <!-- FOOTER -->
   <footer>
     <div class="wrapper-links">
-      <div class="column">
-        <h5>SECURA</h5>
-        <p>About Us</p>
-        <p>Why SECURA</p>
-        <p>How it works</p>
-        <p>Jobs</p>
-      </div>
-      <div class="column">
-        <h5>Alarm Systems</h5>
-        <p>Purchase Advisor</p>
-        <p>Alarm Systems with Kids?</p>
-        <p>Alarm goes off...What now?</p>
-      </div>
-      <div class="column">
-        <h5>Customer Service</h5>
-        <p>FAQ</p>
-        <p>Contact</p>
-        <p>Terms & Condition</p>
-        <p>Data Protection</p>
-      </div>
-      <div class="column">
-        <h5>Payment Methods</h5>
-        <p><%= image_tag "vorkasse.png", style: "height: 35px" %></p>
-        <p><%= image_tag "master_card.png", style: "height: 35px" %></p>
-        <p><%= image_tag "visa.png", style: "height: 35px" %></p>
-        <p>Invoice</p>
-      </div>
+
+      <ul class="column">
+        <li class="title">SECURA</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Why SECURA</a></li>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Alarm Systems</li>
+        <li><a href="#">Purchase Advisor</a></li>
+        <li><a href="#">Alarm Systems with Kids?</a></li>
+        <li><a href="#">Alarm goes off...What now?</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Customer Service</li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Data protection</a></li>
+      </ul>
+
+      <ul class="column">
+        <li class="title">Payment Methods</li>
+        <li><%= image_tag "vorkasse.png", style: "height: 35px" %></li>
+        <li><%= image_tag "master_card.png", style: "height: 35px" %></li>
+        <li><%= image_tag "visa.png", style: "height: 35px" %></li>
+        <li>Invoice</li>
+      </ul>
+
     </div>
 
     <div class="wrapper-bottom">
       <p>Copyright (c) 2018 Secura AG, all rights reserved</p>
-      <p>Login in as a partner</p>
+      <p><a href="#">Login</a> in as a partner</p>
     </div>
 
 

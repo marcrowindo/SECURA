@@ -32,7 +32,8 @@
 
 
 <!-- Price estimate  -->
-<div class="container-content container-content-access-count-page animated" id="card-access-count-new">
+<div class="container-content-access-count-page animated" id="card-access-count-new">
+  <div class="container-content">
   <div class="container-form-content-people">
     <div class="container-price-estimate">
       <h6>Your current price range estimate:</h6>
@@ -45,20 +46,21 @@
   </div>
 
   <!-- Form content  -->
-  <div class="form-on-every-page-access-count">
+  <div class="form-on-every-page form-on-every-page-access-count">
 
-    <div class="container-text-center form-access-count">
+
       <%= simple_form_for @building, url: building_access_count_path(@building), method: :post, remote: true do |b| %>
       <%= b.text_field :access_count, data: { "slider-min" => "0", "slider-max" => "20",  "slider-step" => "1", "slider-value" => "0" } %>
       <h4><b><span id="slider-value">1</span></b> persons</h4>
-    <div class="form-buttons-on-every-page">
-    <a href="#" id="button-back">Back</a>
-    <input name="commit" type="submit" value="Next" id="button-next" />
-    <% end %>
-  </div>
-    </div>
-  </div>
 
+    <div class="form-buttons-on-every-page access-fix-btn">
+      <a href="#" id="button-back">Back</a>
+      <input name="commit" type="submit" value="Next" id="button-next" />
+    <% end %>
+    </div>
+
+  </div>
+</div>
 </div>
 
 <%= content_for :after_js do %>
@@ -69,7 +71,7 @@
     slider.bind('change', function(e) {
       console.log(slider.attr('data-value'))
       inputValue.text(slider.attr('data-value'))
-    }) 
+    })
   </script>
 <% end %>
 

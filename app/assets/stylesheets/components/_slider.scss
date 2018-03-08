@@ -1,7 +1,9 @@
-#ex1Slider .slider-selection {
-  background: #BABABA;
+.slider-track {
+  height: 15px !important;
+  margin-top: -7px !important;
+  border-radius: 15px !important;
 }
 
-.container-text-center {
-  text-align: center;
+.slider-selection {
+  background-image: linear-gradient(to bottom, #3A9FEE 0%, #3A9FEE 100%) !important;
 }

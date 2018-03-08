@@ -14,7 +14,7 @@ setTimeout(function() {
   renderFloorsPartial('<%= j render "shared/window_new", building: @building, request: @request, floors: @floors %>')
   newCard = document.querySelector('.container-content-windows-page')
   newCard.classList.add('slideInRight')
-}, 800)
+}, 1000)
 
 // Update the URL (change history)
 history.pushState(null, null, '/buildings/<%= @building.id %>/floors/windows')

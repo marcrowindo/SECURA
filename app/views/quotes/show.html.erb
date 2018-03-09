@@ -40,7 +40,7 @@
       if @request.building.emergency_response == "No"
         "You stated that you were <b>not</b> interested in emergency response system installed to your building.".html_safe
       else
-        "You stated that you <b>did</b> want to install a emergency repsonse system to your building".html_safe
+        "You stated that you <b>did</b> want to install an emergency repsonse system to your building".html_safe
       end
     end %>
 
@@ -75,8 +75,8 @@
         <h2><%= @quote.supplier_name %></h2>
         <p><b>Thank you for trusting us, <%= @user.email %></b><br>
           <br>
-        You have requested the following security provisions on your <b><%= @request.building.object_type %></b>. <%= vds_logic %> <%= e_r_logic %> <%= s_h_logic %>
-        <%= e_r_logic %> Your current request has <b><%= @request.building.floors.count %></b> floor(s). <br>
+        You have requested the following security provisions on your <b><%= @request.building.object_type %></b>. <%= vds_logic %> <%= e_r_logic %> <%= e_r_logic %> <%= s_h_logic %>
+          Your current request has <b><%= @request.building.floors.count %></b> floor(s). <br>
           <% @request.building.floors.each do |floor| %>
               <b><li><%= floor.floor_type %>,</li></b>
               <li> with <b><%= floor.windows %></b> windows, </li>

@@ -34,9 +34,9 @@
     <div class="container-content-offer">
       <div class="container-price-recap-payment">
       </div>
-      <div class="container-offer-pay">
+      <div class="container-offer-pay-confirmation">
 
-        <%= form_tag quote_booking_payments_path(@booking.quote, @booking) do %>
+        <%= form_tag quote_booking_payments_path(@booking.quote, @booking), id: 'stripe-form' do %>
           <article>
             <label class="amount">
 
@@ -64,3 +64,14 @@
 
   </div>
 </div>
+
+<%= content_for :after_js do %>
+  <script>
+    var stripeBtn = document.querySelector('.stripe-button-el')
+    stripeBtn.style.display = 'none'
+
+    var stripeForm = document.getElementById('stripe-form')
+    var newBtn = '<button id="pay-btn">PAY NOW</button>'
+    stripeForm.insertAdjacentHTML('beforeend', newBtn)
+  </script>
+<% end %>

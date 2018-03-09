@@ -56,8 +56,8 @@
     <div class="container-content-offer">
       <div class="container-price-recap-quotes">
         <div class="black-circle">
-          <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
-          
+          <!-- <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div> -->
+
         </div>
 
 
@@ -75,17 +75,19 @@
       </div>
       <div class="container-offer-pay-quote">
 
-        <h2><%= @quote.supplier_name %></h2>
-        <p><b>Thank you for trusting us, <%= @user.email %></b><br>
+        <h2>Price Offer by <%= @quote.supplier_name %></h2>
+        <p>
+          <!-- <b>Thank you for trusting us, <%= @user.email %></b> -->
+          <br>
           <br>
         You have requested the following security provisions on your <b><%= @request.building.object_type %></b>. <%= vds_logic %> <%= e_r_logic %> <%= e_r_logic %> <%= s_h_logic %>
           Your current request has <b><%= @request.building.floors.count %></b> floor(s). <br>
           <% @request.building.floors.each do |floor| %>
-              <b><li><%= floor.floor_type %>,</li></b>
+ <!--              <b><li><%= floor.floor_type %>,</li></b>
               <li> with <b><%= floor.windows %></b> windows, </li>
               <li><b><%= floor.rooms %></b> rooms, </li>
               <li><b><%= floor.doors %></b> doors, </li>
-              <li>and <b><%= floor.windows_and_doors_sensor %></b> sensors for each of those windows and doors.</li>
+              <li>and <b><%= floor.windows_and_doors_sensor %></b> sensors for each of those windows and doors.</li> -->
           <% end %>
 
 
@@ -97,7 +99,7 @@
 
 
 
-
+<div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
 
 
 

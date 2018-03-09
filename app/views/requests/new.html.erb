@@ -1,17 +1,31 @@
 <%= flash[:not_allowed] %>
 
+
 <!-- MAIN BANNER (ends after steps)-->
 <div class="banner">
+
+  <!-- NAVBAR -->
+  <div class="header">
+    <%= image_tag "secura_logo_white.png", id: "logo" %>
+    <div class="header-right">
+      <nav>
+        <li><a href="#">What we offer</a></li>
+        <li><a href="#">Customer feedback</a></li>
+      </nav>
+      <span><i class="fas fa-phone"></i> 0176 700 166 02</span>
+    </div>
+  </div>
+
   <div class="banner-content">
-      <div class="header-one">
-        <h1>Home security made easy</h1>
-        <div class="quality-assurances">
+    <div class="header-one">
+      <h1>Home security made easy</h1>
+      <div class="quality-assurances">
         <%= image_tag "tuv.png", id: "tuv" %>
         <%= image_tag "vds.png", id: "vds" %>
-        </div>
       </div>
-        <h2>Get five offers from our trusted partners in four easy steps
-        </h2>
+    </div>
+    <h2>Get five offers from our trusted partners in four easy steps
+    </h2>
 
 
     <!-- Insert ZIP code field -->
@@ -211,7 +225,7 @@
     </div>
   </div>
 </div>
-  <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <div class="wrapper-links">
     <ul class="column">
@@ -250,3 +264,5 @@
     <p><a href="#">Login</a> in as a partner</p>
   </div>
 </footer>
+
+

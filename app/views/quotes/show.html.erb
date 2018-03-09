@@ -1,3 +1,5 @@
+<!-- PAGE 12 - Quote and price -->
+
 <div class="wrapper">
   <div class="main-container">
 
@@ -24,7 +26,8 @@
         <a data-toggle="modal" data-target="#exampleModalCenter">FAQ</a>
       </div>
     </div>
-    
+
+
     <% def vds_logic
       if @request.building.vds_certification == "No"
         "You requested that you <b>did not</b> want to VdS certify your building.".html_safe
@@ -45,15 +48,32 @@
       if @request.building.security_hull == "No"
         "You also stated that you were <b>not</b> interested in having your alarm system active whilst in your home.".html_safe
       else
-        "You also stated that you <b>were</b> interested in having your alarm system actice whilst in your home.".html_safe
+        "You also stated that you <b>were</b> interested in having your alarm system active whilst in your home.".html_safe
       end
     end %>
-    
+
 
     <div class="container-content-offer">
-      <div class="container-price-recap">
+      <div class="container-price-recap-quotes">
+
+        <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
+
+
+        <%= simple_form_for [@quote, @booking] do |f| %>
+        <b><%= f.input :date, as: :string, input_html: { class: 'datedropper' } %></b>
+        <%= f.submit "Confirm", input_html: { class: 'btn' } %>
+        <% end %>
+
+
+<!--           <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li> -->
+<!-- </ul>
+ -->
+
+      </div>
+      <div class="container-offer-pay">
+
         <h2><%= @quote.supplier_name %></h2>
-        <h6><b>Thank you for trusting us, <%= @user.email %></b><br>
+        <p><b>Thank you for trusting us, <%= @user.email %></b><br>
           <br>
         You have requested the following security provisions on your <b><%= @request.building.object_type %></b>. <%= vds_logic %> <%= e_r_logic %> <%= s_h_logic %>
         <%= e_r_logic %> Your current request has <b><%= @request.building.floors.count %></b> floor(s). <br>
@@ -66,23 +86,13 @@
           <% end %>
 
 
-<!--           <li>Your range estimate came to <%= @request.price_min %> to <%= @request.price_max %>.</li> -->
-        </ul>
 
 
-      </div>
-      <div class="container-offer-pay">
         <!-- <h6><b>Thank you for trusting us, <%= @user.email %></b>,<%= @quote.supplier_name %> has an offer to secure your <%= @request.building.object_type %> for </h4><br> -->
 
         <!-- <h4>Based on your request our trusted partner <%= @quote.supplier_name %> has an offer to secure your <%= @request.building.object_type %> for </h4><br> -->
 
-        <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
 
-
-        <%= simple_form_for [@quote, @booking] do |f| %>
-        <b><%= f.input :date, as: :string, input_html: { class: 'datedropper' } %></b>
-        <%= f.submit "Confirm", input_html: { class: 'btn' } %>
-        <% end %>
 
 
 

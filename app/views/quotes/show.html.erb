@@ -55,8 +55,11 @@
 
     <div class="container-content-offer">
       <div class="container-price-recap-quotes">
+        <div class="black-circle">
+          <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
+          
+        </div>
 
-        <div id="price"><%= humanized_money_with_symbol(@quote.price) %></div>
 
 
         <%= simple_form_for [@quote, @booking] do |f| %>

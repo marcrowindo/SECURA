@@ -494,6 +494,10 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   background-color: #f94b1b;
 }
 
+#button-next:focus {
+  outline: 0;
+}
+
 #button-next {
   margin: 30px 30px;
   background-color: #FC5E25;
@@ -556,10 +560,13 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   background-color: #f94b1b;
 }
 
+#button-orange:focus {
+  outline: 0;
+}
+
 .banner-content-thanks h4 {
   margin-bottom: 30px;
 }
-
 
 
 // * {

@@ -147,6 +147,10 @@
   background-color: #f94b1b;
 }
 
+.container-price-recap-quotes input:focus {
+  outline: 0;
+}
+
 .black-circle {
   background-color: black;
   opacity: 0.6;
@@ -187,6 +191,10 @@
   transition: 0.5s ease;
   color: white;
   text-decoration: none;
+}
+
+#pay-btn:focus {
+  outline: 0;
 }
 
 .form-group input {
@@ -240,4 +248,9 @@
   font-size: 20px;
 }
 
+#stripe-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 

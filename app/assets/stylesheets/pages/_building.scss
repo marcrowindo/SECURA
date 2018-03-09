@@ -228,6 +228,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border-radius: 15px;
   height: 560px;
   background-color: white;
+  position: relative;
 }
 
 
@@ -431,6 +432,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  position: absolute;
+  bottom: 5px;
   // top: 285px;
   // left: 90px;
 }

@@ -12,22 +12,26 @@
 
 
 /* left column */
-.container-price-recap {
+.container-price-recap-quotes {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
-  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('3floor.jpg');
+  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('12quotes.jpeg');
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-size: 900px auto;
-  background-position: 83% 78%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  min-height: 0;
-  min-width: 0;
+  background-position: 60% 78%;
+  padding: 30px;
 }
 
+.container-price-recap-payment {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  background-image: linear-gradient(-225deg, rgba(47, 128, 237, 0.8) 50%, rgba(86, 204, 242, 0.4)), image_url('13payment.jpg');
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-size: 900px auto;
+  background-position: 64% 80%;
+}
 // .container-price-recap h2 {
 //   margin-bottom: 50px;
 // }
@@ -51,6 +55,7 @@
 .container-offer-pay {
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
+  padding: 30px;
 }
 
 .container-offer-pay h4 {
@@ -67,12 +72,19 @@
   font-weight: lighter;
   line-height: 22px;
 }
-.container-offer-pay label {
-  display: none;
+.container-offer-pay p {
+  font-size: 14px;
+  text-align: left;
+  text-indent: 5px;
+  font-weight: lighter;
+  line-height: 20px;
 }
+// .container-offer-pay label {
+//   display: none;
+// }
 
 /* Orange button */
-.container-offer-pay input {
+.container-price-recap input {
   margin: 10px 0px;
   background-color: #FC5E25;
   border: 0px;
@@ -85,9 +97,27 @@
   text-decoration: none;
   text-align: left;
 }
-.container-offer-pay input:hover {
+.container-price-recap input:hover {
   background-color: #f94b1b;
 }
+
+.container-price-recap-quotes input {
+  margin: 10px 0px;
+  background-color: #FC5E25;
+  border: 0px;
+  padding: 10px 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+.container-price-recap-quotes input:hover {
+  background-color: #f94b1b;
+}
+
 
 .stripe-button-el span {
   margin: 10px 0px;
@@ -108,6 +138,8 @@
   color: #56CCF2;
   margin-bottom: 25px;
   margin-top: 25px;
+  text-align: canter;
+  padding: 30px 55px;
 }
 
 .form-group input {
@@ -137,9 +169,10 @@
 //   color: white;
 // }
 
-
+/* Calendar */
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   background-color: #eeeeee !important;
   opacity: 1;
   color: black;
+  width: 200px;
 }

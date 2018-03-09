@@ -3,9 +3,16 @@
 <!-- MAIN BANNER (ends after steps)-->
 <div class="banner">
   <div class="banner-content">
-    <h1>Home security made easy</h1>
-    <h2>Get five offers from our trusted partners in four easy steps
-    </h2>
+      <div class="header-one">
+        <h1>Home security made easy</h1>
+        <div class="quality-assurances">
+        <%= image_tag "tuv.png", id: "tuv" %>
+        <%= image_tag "vds.png", id: "vds" %>
+        </div>
+      </div>
+        <h2>Get five offers from our trusted partners in four easy steps
+        </h2>
+
 
     <!-- Insert ZIP code field -->
     <div class="form-inline">
@@ -22,7 +29,7 @@
     <div class="step">
       <%= image_tag "Step1.png", class: "icon" %>
       <div class="step-desc">
-        <%= image_tag "Number1.png", class: "number" %>
+        <span class="number">1</span>
         <p>Fill in our form</p>
       </div>
     </div>
@@ -30,7 +37,7 @@
     <div class="step">
       <%= image_tag "Step2.png", class: "icon" %>
       <div class="step-desc">
-        <%= image_tag "Number2.png", class: "number" %>
+        <span class="number">2</span>
         <p>Receive 5 offers</p>
       </div>
     </div>
@@ -38,7 +45,7 @@
     <div class="step">
       <%= image_tag "Step3.png", class: "icon" %>
       <div class="step-desc">
-        <%= image_tag "Number3.png", class: "number" %>
+        <span class="number">3</span>
         <p>Choose a provider</p>
       </div>
     </div>
@@ -46,7 +53,7 @@
     <div class="step">
       <%= image_tag "Step4.png", class: "icon" %>
       <div class="step-desc">
-        <%= image_tag "Number4.png", class: "number" %>
+        <span class="number">4</span>
         <p>Installation</p>
       </div>
     </div>

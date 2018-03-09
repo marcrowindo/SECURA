@@ -106,6 +106,7 @@
   text-indent: 5px;
   font-weight: lighter;
   line-height: 20px;
+  margin-top: 20px;
 }
 
 .container-price-recap-quotes label {
@@ -147,11 +148,11 @@
   background-color: #f94b1b;
 }
 
-.black-circle {
-  background-color: black;
-  opacity: 0.6;
-  border-radius: 100px;
-}
+// .black-circle {
+//   background-color: black;
+//   opacity: 0.6;
+//   border-radius: 100px;
+// }
 
 .stripe-button-el span {
   margin: 10px 0px;
@@ -169,11 +170,12 @@
 
 #price {
   font-size: 55px;
-  color: #56CCF2;
+  color: #3A9FEE;
   margin-bottom: 25px;
   margin-top: 25px;
   text-align: canter;
-  padding: 30px 55px;
+  padding: 0px 30px;
+  text-align: right;
 }
 
 #pay-btn {

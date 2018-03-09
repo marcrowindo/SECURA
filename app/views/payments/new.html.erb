@@ -43,7 +43,8 @@
         <span>Booked Date: <%= time_tag @booking.date %></span></br>
 
         <span>Quote Total: <%= humanized_money_with_symbol(@booking.quote.price) %></span></br>
-              <span>Amount Due Today (20%): <%= humanized_money_with_symbol(@booking.amount) %></span>
+        <span> Amount Due Today: <%= humanized_money_with_symbol(@booking.amount) %></span> <br>
+              <p> To secure this offer we require a 20% deposit. </p> 
             </label>
           </article>
 
